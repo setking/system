@@ -1,0 +1,98 @@
+<!--pages/orderScrapePay/orderScrapePay.wxml-->
+<!--次卡  蹭卡支付 by cjy-->
+<view class='con'>
+    <view class='order-card'>
+        <text class='card-name'>{{item.shopName}}</text>
+                    <view class='order-card-line'></view>
+                    <image src="{{item.headImgUrlPress || '../../../resources/default.png'}}" class='order-card-owner-img'></image>
+                    <text class='order-card-owner-name'>{{item.nickName}}</text>
+                    <image src="{{item.sex == '0' ? '../../../resources/gril.png' : '../../../resources/man.png'}}" class='order-card-owner-sex'></image>
+                    <view class='order-card-save'>每次立省
+                        <text>{{item.countOriginalAmount - item.countActualAmount}}</text>元</view>
+                    <view class='order-card-monetary'>可消费次数
+                        <text style='font-size:18px;font-weight:bold;padding:0 10rpx;'>{{item.cardReturn}}</text>次</view>
+                    <view class='order-card-type'>次卡</view>
+
+        <!-- <view class='card-list-main'>
+            <image src='http://payp.kabuduo.cn/img/s2/{{filters.toFixs(data.shareRate/10*10)}}.png' class='card-img'></image>
+            <text class='card-name'>{{data.shopName}}</text>
+            <image src="{{data.headImgUrlPress || '/resources/default.png'}}" class='card-owner-img'></image>
+            <text class='card-owner-name'>{{data.nickName}}</text>
+            <image src="{{data.sex == '0' ? '/resources/gril.png' : '/resources/man.png'}}" mode="widthFix" class="card-owner-sex" />
+            <text class='card-owner-years'>{{data.age}}</text>
+            <text class='card-income'>可共享余额:{{data.cardAmount}}</text>
+        </view> -->
+    </view>
+
+    <view class='card-pay-info'>
+        <view class='order-control'>
+            <view class='consume-count'>
+                <text>消费次数</text>
+            </view>
+            <view class='order-num-main'>
+                <form>
+                    <image class='order-control-minus' src='../../../resources/icon_-@2x.png'></image>
+                    <input type='number' value='' style='width:30%;color:#433D3D;font-size:14px;'></input>
+                    <image class='order-control-plus' src='../../../resources/icon_+@2x.png'></image>
+                </form>
+                
+
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>实际支付金额</text>
+            </view>
+            <view class='card-pay-right'>
+                <text class='right-color' style='color:#221F1F'>95.00元</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>原价每次消费</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>100元/次</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>实际每次消费</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>80元/次</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>优惠金额</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>80元</text>
+            </view>
+        </view>
+        <view style='clear:both;'></view>
+    </view>
+    <view class='pay-way'>
+        <view class='pay-way-text'>
+            <text>支付方式</text>
+        </view>
+        <view class='pay-way-main'>
+            <view class='pay-way-left'>
+                <image src='../../../resources/pay_wechatpayment.png' class='pay-way-icon'></image>
+                <text>微信支付</text>
+            </view>
+            <view class='pay-way-right'>
+                <image src='../../../resources/Rectangle.png' class='pay-way-next'></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='pay-way-btn'>
+    <view class='gohome' bindtap='tohome'>
+        <image src='../../../resources/home.png' class='homeico'></image>
+        <span>去首页</span>
+    </view>
+    <button class='new-card' bindtap='toCusIncome'>办张卡</button>
+    <button class='pay-confirm' bindtap='zhifu'>确认支付</button>
+</view>

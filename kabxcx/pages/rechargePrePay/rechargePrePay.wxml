@@ -1,0 +1,80 @@
+<!--pages/rechargePrePay/rechargePrePay.wxml-->
+<!--充送卡  储值卡自用支付 by cjy-->
+<view class='con'>
+    <view class='card-list'>
+        <view class='recharge-card'>
+            <text class='card-name'>昌平kfc</text>
+            <view class='big-font'>9</view>
+            <view class='card-point'>.</view>
+            <view class='small-font'>0</view>
+            <view class='balance-font'>折</view>
+            <view class='recharge-card-line'></view>
+            <image src="/resources/default.png" class='order-card-owner-img'></image>
+            <text class='order-card-owner-name'>啦啦啦啦啦啦啦</text>
+            <image src="/resources/gril.png" class='order-card-owner-sex'></image>
+            <text class='card-income'>可消费金额:22222</text>
+        </view>
+    </view>
+    <form>
+        <view class='pay-count'>
+            <text class='pay-icon'>¥</text>
+            <input bindinput="inputAmount" value='' placeholder='请输入账单原始金额'></input>
+        </view>
+    </form>
+    <view class='card-pay-info'>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>支付金额</text>
+            </view>
+            <view class='card-pay-right'>
+                <text class='right-color'>95.00元</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>尊享折扣</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>9.5折</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>优惠金额</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>50元</text>
+            </view>
+        </view>
+    </view>
+    <view class='pay-way'>
+        <view class='pay-way-text'>
+            <text>支付方式</text>
+        </view>
+        <view class='pay-way-main'>
+            <view class='pay-way-left'>
+                <image src='/resources/mycard.png' class='pay-way-icon'></image>
+                <text>余额支付</text>
+            </view>
+            <view class='pay-way-right'>
+                <image src='/resources/salepay_but_select.png' class='pay-way-next'></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='pay-way-btn'>
+    <button class='new-card' bindtap='toRecharge'>充值</button>
+    <button class='pay-confirm' bindtap='zhifu'>确认支付</button>
+</view>
+<!-- 弹框提示 -->
+<view class='mask' wx:if="{{yue}}">
+    <view class='modalDlg'>
+        <view class='prompt-message'>
+            <text>储值卡余额不足以支付消费订单购卡享受优惠吧~~</text>
+        </view>
+        <view class='prompt-btn'>
+            <view class='again-btn'>重新输入</view>
+            <view class='buycard-btn'>购卡</view>
+        </view>
+    </view>
+</view>

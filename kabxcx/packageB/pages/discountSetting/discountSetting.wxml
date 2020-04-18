@@ -1,0 +1,80 @@
+<!--储值卡折扣设定 by cjy-->
+<view class='discount-mian' v-if = '{{ info }}'>
+  <view class='discount-num'><text>{{ expoectIncome }}</text></view>
+  <view class='discount-text'><text>整卡预计收入</text></view>
+  <view class='discount-info'>
+    <view class='discount-info-left'>
+      <text class='balance-num'>{{ info.cardAmount }}\n</text><text class='balance-text'>卡余额</text>
+    </view>
+    <view class='discount-info-right'>
+      <text class='balance-num'>{{ maxIncome }}\n</text><text class='balance-text1'>最多赚取</text>
+    </view>
+  </view>
+</view> 
+<!-- 设置折扣 -->
+<view class='discount-setting'>
+  <progress  id = 'progress' percent='{{ percent }}' activeColor='#FFEA0E' stroke-width='11' backgroundColor='#ccc'>
+  
+  </progress>
+  <view class='discountImg' bind:touchmove = "touchmove" bind:touchstart = "touchstart" bind:touchend = "touchend" style = "{{ style }}">
+    <image src='../../../resources/share_icon.png'></image>
+    <view class='discountNum'>{{ discount }}折</view>
+  </view>
+  <view class='discount-num1'>
+    <text>5</text>
+    <text>6</text>
+    <text>7</text>
+    <text>8</text>
+    <text>9</text>
+  </view>
+  <view class='discount-card'><text>共享折扣卡</text></view>
+
+  <view class='discount_info_img' wx:if="{{info.cardRate-discount>1}}">
+    <image src='../../../resources/1.png' class='dis_img'></image>
+    <view class='dis_info'>清仓甩卖,撤啦 撤啦</view>
+  </view>
+  <view class='discount_info_img' wx:if="{{info.cardRate-discount>0 &&info.cardRate-discount<=1}}" >
+    <image src='../../../resources/2.png' class='dis_img'></image>
+    <view class='dis_info'>吃点小亏,还算OK</view>
+  </view>
+  <view class='discount_info_img' wx:if="{{info.cardRate-discount==0}}">
+    <image src='../../../resources/3.png' class='dis_img'></image>
+    <view class='dis_info'>WHAT？不赚不赔钱 该如何解释</view>
+  </view>
+  <view class='discount_info_img' wx:if="{{info.cardRate-discount>=-1 && info.cardRate-discount<0}}">
+    <image src='../../../resources/4.png' class='dis_img'></image>
+    <view class='dis_info'>边玩边赚钱的感觉爽歪歪</view>
+  </view>
+  <view class='discount_info_img' wx:if="{{info.cardRate-discount<-1}}">
+    <image src='../../../resources/5.png' class='dis_img'></image>
+    <view class='dis_info'>朋友,别人用完,你赚疯了</view>
+  </view>
+  
+</view>
+<view class='btn-share-main' bindtap = 'openShare'>
+  <view class='open-share'>保存并分享给好友</view>
+</view>
+
+<canvas canvas-id='share' class='share' style='width:320px;height:250px;'>
+</canvas>
+
+<!-- 分享弹窗 -->
+<block wx:if = "{{ hidden }}">
+  <view class='mask'  bindtap = 'setHidden'>
+    <view class='modalDlg'>
+      <view class='modal-list'>
+        <view class='modal-list-main'>
+          <button class='list-main-left' open-type="share">
+            <image class='list-friend' src='../../../resources/share_wechat.png'></image>
+            <text>发送给朋友</text>
+          </button>
+          <view class='list-main-left'  bindtap='onShare' >
+            <image class='list-friend' src='../../../resources/share_pyq.png'></image>
+            <text>分享到朋友圈</text>
+          </view>
+        </view>
+      </view>
+      <view class='btn-cancel' bindtap = "setHidden">取消</view>
+    </view>
+  </view>
+</block>

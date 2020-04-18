@@ -1,0 +1,14 @@
+<canvas canvas-id='share' class='share' style='width:320px;height:550px;'>
+
+</canvas>
+
+<view class='btn-area'>
+  <view class='modal-list-main flex center'>
+    <button class='list-main-left' open-type="share">
+      <text>发送给朋友</text>
+    </button>
+    <button class='list-main-left' bindtap='saveImageToPhotosAlbum'>
+      <text>分享到朋友圈</text>
+    </button>
+  </view>
+</view>

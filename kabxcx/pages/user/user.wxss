@@ -1,0 +1,94 @@
+.log-list {
+  box-sizing: border-box;
+  font-family: PingFangSC-Medium;
+}
+.header {
+  width: 100%;
+  font-size: 20px;
+  color: #433D3D;
+  padding: 5px;
+  box-sizing: border-box;
+  letter-spacing: 0;
+  height: 350rpx;
+    text-align: center;
+    position: relative;
+}
+.header .portrait{
+  height: 220rpx;
+  width:220rpx;
+  display: block;
+  border-radius: 50%;
+}
+.header .username{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 310rpx;
+}
+.user{
+  margin: 5rpx 0;
+  height: 200rpx;
+  font-size: 12px;
+  color: #919191;
+  border-bottom: 10rpx solid #F6F6F6;
+}
+.user .user_title{
+  font-size: 20px;
+  color: #433D3D;
+}
+.card{
+  padding-top: 50rpx;
+}
+.card_li{
+  height: 120rpx;
+  font-size: 20px;
+  color: #433D3D;
+}
+.card_li .card_icon{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+}
+.card_li .card_name{
+  display: inline-block;
+  text-align: center;
+  width: 5em;
+}
+.mar{
+  position: fixed;
+  right: 30rpx;
+}
+.heads_image{
+  height: 220rpx;
+  width: 220rpx;
+  border-radius: 50%;
+  position: absolute;
+    border: 50rpx solid #fff;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin:auto;
+    text-align: center;
+}
+.user-info{
+  width: 100%;
+  height: 20px;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+.img-sex{
+  width: 19px;
+  height: 19px;
+  padding-left: 10rpx;
+}
+.user-age{
+  width: 38px;
+  height: 19px;
+  background: #c0c0c0;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 19px;
+  color: #fff;
+  font-size: 10px;
+  float: left;
+}

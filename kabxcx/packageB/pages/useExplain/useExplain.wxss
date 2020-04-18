@@ -1,0 +1,21 @@
+/* pages/useExplain/useExplain.wxss */
+page{
+  background: #fff;
+}
+.use-flow{
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.use-title{
+  font-size: 14px;
+  color: #000;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.use-info{
+  color: #333;
+  font-size: 12px;
+  text-align: left;
+}

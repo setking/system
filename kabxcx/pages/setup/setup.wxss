@@ -1,0 +1,42 @@
+.header{
+  width: 100%;
+  padding: 0 80rpx;
+  box-sizing: border-box;
+  height: 60%;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #666666;
+}
+.header .portrait{
+  height: 220rpx;
+  width:220rpx;
+  display: block;
+  border-radius: 50%;
+}
+.sigin_out{
+  margin-top: 30rpx;
+}
+.btn-area .disabled{
+  background: #d8d8d8;
+  box-shadow: 0 2px 4px 0 #D8D8D8;
+}
+.header .heads_image{
+  height: 170rpx;
+  width: 170rpx;
+  border-radius: 50%;
+  position: absolute;
+    border: 40rpx solid #fff;
+    top: 10rpx;
+}
+.userphoto{
+  font-size: 37rpx;
+  margin-top: 60rpx;
+}
+.userphoto-title{
+  font-size: 32rpx;
+}
+.userphoto view{
+  height: 65rpx;
+  line-height: 65rpx;
+  display: table;
+}

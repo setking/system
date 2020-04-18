@@ -1,0 +1,44 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <view class='flex header'>
+    <block wx:if="{{ !isLogin }}">
+      <view bindtap='routeLogin'>
+        <image src='/resources/default.png' class='heads_image'></image>
+        <text class='username'>登录/注册</text>
+      </view>
+    </block>
+    <block wx:else>
+        <image src='{{userInfo.headImgUrlPress?userInfo.headImgUrlPress:"/resources/default.png"}}' class='heads_image'></image>
+      <view class='username'>
+      <span>{{ userInfo.nickName }}</span>
+         <span> <image class='img-sex' src='/resources/gril.png' wx:if="{{userInfo.sex == 0}}"></image>
+          <image class='img-sex' src='/resources/man.png' wx:else></image></span>
+      </view>
+    </block>
+    <image class="auto icon mar" src="/resources/homeSetting.png" bindtap='setup'></image>
+  </view>
+  <view class="flex middle user">
+    <view class="text-center">
+      <text class="user_title">{{ info.totalCardCount || '0' }}</text>
+      <text>\n储值卡(张)</text>
+    </view>
+    <view class="text-center">
+      <text class="user_title">{{ info.totalCardAmount || '0' }}</text>
+      <text>\n总余额(元)</text>
+    </view>
+    <view class="text-center">
+      <text class="user_title">{{ info.totalShareAmountIn || '0' }}</text>
+      <text>\n共享收益(元)</text>
+    </view>
+  </view>
+  <view class="card">
+    <view class="flex middle center card_li" bindtap='wallet'>
+      <image class="auto card_icon" src="/resources/mywallet.png"></image>
+      <text class='card_name'>我的钱包</text>
+    </view>
+    <view class="flex middle center card_li" bindtap='card'>
+      <image class="auto card_icon" src="/resources/mycard.png"></image>
+      <text class='card_name'>储值卡</text>
+    </view>
+  </view>
+</view>

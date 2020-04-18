@@ -1,0 +1,133 @@
+.wallet {
+    background: #f8f8f8;
+}
+
+.balance {
+    background: #ffd006;
+    color: #fff;
+    height: 200rpx;
+    text-align: center;
+    font-family: PingFangSC-Medium;
+    font-size: 54px;
+    line-height: 200rpx;
+}
+
+.balance_list {
+    background: #fff;
+}
+
+.balance_li {
+    padding: 30rpx 0 28rpx;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 10px;
+    color: #4b4949;
+}
+
+.balance_li .balance_title {
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+}
+
+.list {
+    height: 100rpx;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #fff;
+    margin-top: 20rpx;
+}
+
+.btn-area .desc {
+    display: inline-block;
+    font-size: 12px;
+    color: #adadad;
+    margin: 32rpx 0 66rpx;
+    padding-left: 30rpx;
+}
+
+.btn-area view {
+    background: #ffd006;
+    box-shadow: 0 2px 4px 0 #f5d136;
+    border-radius: 8px;
+    height: 94rpx;
+    text-align: center;
+    line-height: 94rpx;
+}
+
+.mar {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.incometext {
+    font-size: 14px;
+    padding-left: 30rpx;
+}
+
+/* 弹窗css */
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    /* display: none; */
+}
+
+.modalDlg {
+    width: 606rpx;
+    height: 414rpx;
+    background: #fff;
+    border-radius: 8px;
+    /* margin: 50% auto;
+  overflow: hidden; */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: -258rpx 75rpx;
+    z-index: 120;
+}
+
+.mask_img {
+    width: 248rpx;
+    height: 248rpx;
+    margin: 20rpx auto;
+    display: block;
+}
+
+.prompt-message {
+    text-align: center;
+    color: #252525;
+    font-size: 14px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+.prompt-btn {
+    width: 100%;
+    height: 54px;
+    /* margin-top: 42px; */
+    text-align: center;
+    background: #ffd006;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 28rpx;
+    line-height: 50rpx;
+}
+
+.modal_close {
+    width: 52rpx;
+    height: 52rpx;
+    position: absolute;
+    top: -20rpx;
+    right: -20rpx;
+}

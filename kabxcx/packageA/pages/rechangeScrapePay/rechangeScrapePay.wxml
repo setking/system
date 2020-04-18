@@ -1,0 +1,81 @@
+<!--pages/rechangeScrapePay/rechangeScrapePay.wxml-->
+<!--冲送卡  蹭卡支付 by cjy-->
+<view class='con'>
+    <view class='recharge-card'>
+        <text class='card-name'>{{item.shopName}}</text>
+        <view class='big-font'>{{item.sbig}}</view>
+        <view class='card-point'>.</view>
+        <view class='small-font'>{{item.ssmall || '0'}}</view>
+        <view class='balance-font'>折</view>
+        <view class='recharge-card-line'></view>
+        <image src="{{item.headImgUrlPress || '../../../resources/default.png'}}"  class='order-card-owner-img'></image>
+        <text class='order-card-owner-name'>{{item.nickName}}</text>
+        <image src="{{item.sex == '0' ? '../../../resources/gril.png' : '../../../resources/man.png'}}" class='order-card-owner-sex'></image>
+        <text class='card-income'>{{item.consummerAmount}}</text>
+
+        <!-- <view class='card-list-main'>
+            <image src='http://payp.kabuduo.cn/img/s2/{{filters.toFixs(data.shareRate/10*10)}}.png' class='card-img'></image>
+            <text class='card-name'>{{data.shopName}}</text>
+            <image src="{{data.headImgUrlPress || '/resources/default.png'}}" class='card-owner-img'></image>
+            <text class='card-owner-name'>{{data.nickName}}</text>
+            <image src="{{data.sex == '0' ? '/resources/gril.png' : '/resources/man.png'}}" mode="widthFix" class="card-owner-sex" />
+            <text class='card-owner-years'>{{data.age}}</text>
+            <text class='card-income'>可共享余额:{{data.cardAmount}}</text>
+        </view> -->
+    </view>
+    <view class='see-more' bindtap='toList'>查看更多低折扣共享卡</view>
+    <form>
+        <view class='pay-count'>
+            <text class='pay-icon'>¥</text>
+            <input bindinput="inputAmount" value='{{Amount}}' type='digit' placeholder='请输入账单原始金额'></input>
+        </view>
+    </form>
+    <view class='card-pay-info'>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>支付金额</text>
+            </view>
+            <view class='card-pay-right'>
+                <text class='right-color' style='color:#221F1F'>95.00元</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>尊享折扣</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>9.5折</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>优惠金额</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>5元</text>
+            </view>
+        </view>
+    </view>
+    <view class='pay-way'>
+        <view class='pay-way-text'>
+            <text>支付方式</text>
+        </view>
+        <view class='pay-way-main'>
+            <view class='pay-way-left'>
+                <image src='../../../resources/pay_wechatpayment.png' class='pay-way-icon'></image>
+                <text>微信支付</text>
+            </view>
+            <view class='pay-way-right'>
+                <image src='../../../resources/Rectangle.png' class='pay-way-next'></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='pay-way-btn'>
+    <view class='gohome' bindtap='tohome'>
+        <image src='../../../resources/home.png' class='homeico'></image>
+        <span>去首页</span>
+    </view>
+    <button class='new-card' bindtap='toCusIncome'>办张卡</button>
+    <button class='pay-confirm' bindtap='zhifu'>确认支付</button>
+</view>

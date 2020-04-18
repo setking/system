@@ -1,0 +1,150 @@
+<wxs module="filters" src="../../../utils/toFixed.wxs"></wxs>
+<scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+    <block wx:for="{{cardText}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+        <view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" data-id="{{idx}}" bindtap="switchNav">{{navItem.text}}</view>
+    </block>
+</scroll-view>
+
+<swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{ windowHeight?windowHeight+'px':'auto' }}">
+    <swiper-item class="tab-content">
+        <scroll-view scroll-top="{{scrollTop}}" class='{{isTouchMove ? "tab-scroll" : ""}}"' scroll-y="true" style="height:{{ windowHeight?windowHeight+'px':'auto' }}">
+            <block wx:for="{{list}}" wx:for-index="listidx" wx:for-item="item" wx:key="idx">
+                <view class="card-main" bindtap="toCardScrapePay" data-index="{{listidx}}" data-cardType="{{item.cardType}}" wx:if="{{item.cardType == 0}}">
+                    <!-- <image src="{{ item.imgSrc }}" mode="widthFix" class="bj" /> -->
+                    <text class="card-name">{{item.shopName}}</text>
+                    <view class='big-font'>{{item.sbig}}</view>
+                    <view class='card-point'>.</view>
+                    <view class='small-font'>{{item.ssmall || '0'}}</view>
+                    <view class='balance-font'>折</view>
+                    <view class='card-line'></view>
+                    <image src="{{item.headImgUrlPress || '../../../resources/default.png'}}" class='card-owner-img'></image>
+                    <text class='card-owner-name'>{{item.nickName}}</text>
+                    <image src="{{item.sex == '0' ? '../../../resources/gril.png' : '../../../resources/man.png'}}" class='card-owner-sex'></image>
+                    <text class='card-income'>可消费金额:{{item.consummerAmount}}</text>
+                </view>
+                <!-- c冲送卡样式 start-->
+                <view class='recharge-card' bindtap='toCardScrapePay' data-index="{{listidx}}" data-cardType="{{item.cardType}}" wx:if="{{item.cardType == 1}}">
+                    <text class='card-name'>{{item.shopName}}</text>
+                    <view class='big-font'>{{item.sbig}}</view>
+                    <view class='card-point'>.</view>
+                    <view class='small-font'>{{item.ssmall || '0'}}</view>
+                    <view class='balance-font'>折</view>
+                    <view class='recharge-card-line'></view>
+                    <image src="{{item.headImgUrlPress || '../../../resources/default.png'}}" class='order-card-owner-img'></image>
+                    <text class='order-card-owner-name'>{{item.nickName}}</text>
+                    <image src="{{item.sex == '0' ? '../../../resources/gril.png' : '../../../resources/man.png'}}" class='order-card-owner-sex'></image>
+                    <text class='card-income'>可消费金额:{{item.consummerAmount}}</text>
+                </view>
+                <!-- end -->
+
+                <!-- 次卡样式 start-->
+                <view class='order-card' bindtap='toCardScrapePay' data-index="{{listidx}}" data-cardType="{{item.cardType}}" wx:if="{{item.cardType == 2}}">
+                    <text class='card-name'>{{item.shopName}}</text>
+                    <view class='order-card-line'></view>
+                    <image src="{{item.headImgUrlPress || '../../../resources/default.png'}}" class='order-card-owner-img'></image>
+                    <text class='order-card-owner-name'>{{item.nickName}}</text>
+                    <image src="{{item.sex == '0' ? '../../../resources/gril.png' : '../../../resources/man.png'}}" class='order-card-owner-sex'></image>
+                    <view class='order-card-save'>每次立省
+                        <text>{{item.countOriginalAmount - item.countActualAmount}}</text>元</view>
+                    <view class='order-card-monetary'>可消费次数
+                        <text style='font-size:18px;font-weight:bold;padding:0 10rpx;'>{{item.cardReturn}}</text>次</view>
+                    <view class='order-card-type'>次卡</view>
+                </view>
+                <!-- end -->
+            </block>
+            <view wx:if="{{list.length == 0}}" class="noGoods">
+                <image src="../../../resources/noShop.png" mode="widthFix" />
+                <view>暂无共享卡主，快来成为</view>
+                <view>第一个共享小卡主吧~~</view>
+                <button bindtap="defaultTap">成为卡主</button>
+                <text>成为卡主，享受更底折扣</text>
+
+            </view>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item class="tab-content">
+        <scroll-view scroll-top="{{scrollTop}}" class='{{isTouchMove ? "tab-scroll" : ""}}"' scroll-y="true" style="height:{{ windowHeight?windowHeight+'px':'auto' }}">
+
+            <block wx:for="{{list}}" wx:for-index="listidx" wx:for-item="listItem" wx:key="idx">
+                <view class="card-main" bindtap='toDetail' data-index="{{listidx}}" data-cardType="{{listItem.cardType}}" wx:if="{{listItem.cardType == 0}}">
+                    <text class='b-detail-title'>充值{{listItem.cardAmount}}元</text>
+                    <view class='big-font'>{{listItem.rbig}}</view>
+                    <view class='card-point'>.</view>
+                    <view class='small-font'>{{listItem.rsmall || '0'}}</view>
+                    <view class='balance-font'>折</view>
+                    <view class='card-line'></view>
+                    <view class='b-detail-discount'>
+                        <text>立省<text class='big'>{{filters.toFix(listItem.cardAmount/(listItem.cardRate*0.1)-listItem.cardAmount)}}</text>元</text>
+                    </view>
+                </view>
+                <!-- c冲送卡样式 start-->
+                <view class='recharge-card' bindtap='toDetail' data-index="{{listidx}}" data-cardType="{{listItem.cardType}}" wx:if="{{listItem.cardType == 1}}">
+                    <text class='b-detail-title'>充值{{listItem.cardAmount}}元</text>
+                    <view class='big-font'>{{listItem.rbig}}</view>
+                    <view class='card-point'>.</view>
+                    <view class='small-font'>{{listItem.rsmall || '0'}}</view>
+                    <view class='balance-font'>折</view>
+                    <view class='recharge-card-line'></view>
+                    <view class='b-detail-discount'>
+                        <text>送<text class='big'>{{listItem.cardReturn}}</text>元</text>
+                    </view>
+                </view>
+                <!-- end -->
+                <!-- 次卡样式 start-->
+                <view class='order-card' bindtap='toDetail' data-index="{{listidx}}" data-cardType="{{listItem.cardType}}" wx:if="{{listItem.cardType == 2}}">
+                    <text class='b-detail-title'>充值{{listItem.cardAmount}}元</text>
+                    <view class='order-card-line'></view>
+                    <view class='b-detail-discount'>
+                        <text style='margin-right:30rpx;'>可消费次数<text style='font-size:18px;font-weight:bold;padding:0 10rpx;'>{{listItem.cardReturn}}</text>次</text>
+                        <text>每次立省</text>
+                        <text style='font-size:53px;padding:0 30rpx;'>{{listItem.countOriginalAmount - listItem.countActualAmount}}</text>元
+                    </view>
+                    <view class='order-card-type'>次卡</view>
+                </view>
+                <!-- <view class='order-card' bindtap='toDetail' data-index="{{listidx}}" data-cardType="{{listItem.cardType}}" wx:if="{{listItem.cardType == 2}}">
+                    <text class='b-detail-title'>充值500元</text>
+                    <view class='order-card-line'></view>
+                    <view class='b-detail-discount'>
+                        <text style='margin-right:30rpx;'>可消费次数<text style='font-size:18px;font-weight:bold;padding:0 10rpx;'>500</text>次</text>
+                        <text>每次立省</text>
+                        <text style='font-size:53px;padding:0 30rpx;'>50</text>元
+                    </view>
+                </view> -->
+                <!-- end -->
+            </block>
+
+            <view class='no-card' wx:if="{{list.length == 0}}">
+                <image src='../../../resources/noShop.png'></image>
+                <view class='no-text'>
+                    <text>目前该商家暂无售卡</text>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item class="tab-content">
+        <scroll-view  scroll-top="{{scrollTop}}" class='{{isTouchMove ? "tab-scroll" : ""}}"' scroll-y="true" style="height:{{ windowHeight?windowHeight+'px':'auto' }}">
+
+            <view class='b-details'>
+                <view class='b-info'>
+                    <image src='{{shopdetail.logoPicPress || "../../../resources/default.png"}}' class='b-info-img'></image>
+                    <view class='b-info-right'>
+                        <text class='b-info-name'>{{shopdetail.shopName}}</text>
+                        <text class='b-info-hours'>{{shopdetail.shopStartTime}}-{{shopdetail.shopEndTime}}</text>
+                    </view>
+                </view>
+                <view class='b-phone'>
+                    <text>电话:{{shopdetail.shopMobile}}</text>
+                </view>
+                <view class='b-address'>
+                    <view class='b-address-left'>
+                        <text class='b-address-title'>地址:</text>
+                        <text class='b-address-detail'>{{shopdetail.shopProvince}}{{shopdetail.shopCity}}{{shopdetail.shopArea}}{{shopdetail.shopAddr}}</text>
+                    </view>
+                    <view class='b-address-right'>
+                        <image bindtap='makePhoneCall' src='../../../resources/contact.png' class='b-address-img'></image>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>

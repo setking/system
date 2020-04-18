@@ -1,0 +1,4 @@
+<view class = "middle column center flex container">
+    <image src = '../../resources/icon_wrong.png' class = "block img"></image>
+    <text class = "text">对不起当前二维码无法识别</text>
+</view>

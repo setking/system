@@ -1,0 +1,186 @@
+<!--储值卡支付 by cjy-->
+<wxs module="filters" src="../../../utils/toFixed.wxs"></wxs>
+<view class='con'>
+    <view class='card-list'  wx:if='{{ data.cardType ==0 }}'>
+        <view class='card-main'>
+            <!-- <image src='http://payp.kabuduo.cn/img/s2/{{data.cardRate}}.png' class='card-img'></image> -->
+            <text class='card-name'>{{data.shopName}}</text>
+            <view class='big-font'>{{big}}</view>
+            <view class='card-point'>.</view>
+            <view class='small-font'>{{small || '0'}}</view>
+            <view class='balance-font'>折</view>
+            <view class='card-line'></view>
+            <image src="{{data.headImgUrlPress || '/resources/default.png'}}" class='card-owner-img'></image>
+            <text class='card-owner-name'>{{data.nickName}}</text>
+            <image src="{{data.sex == '0' ? '/resources/gril.png' : '/resources/man.png'}}" class='card-owner-sex'></image>
+            <text class='card-income'>可消费金额:{{data.cardAmount}}</text>
+        </view>
+    </view>
+    <!-- 充送卡样式 -->
+    <view class='card-list' wx:if='{{data.cardType == 1}}'>
+        <view class='recharge-card'>
+                <text class='b-detail-title'>{{data.shopName}}</text>
+                <view class='big-font'>{{big}}</view>
+                <view class='card-point'>.</view>
+                <view class='small-font'>{{small || '0'}}</view>
+                <view class='balance-font'>折</view>
+                <view class='recharge-card-line'></view>
+                <image src="{{data.headImgUrlPress || '/resources/default.png'}}" class='card-owner-img'></image>
+                <text class='card-owner-name'>{{data.nickName}}</text>
+                <image src="{{data.sex == '0' ? '/resources/gril.png' : '/resources/man.png'}}" class='card-owner-sex'></image>
+                <!-- <view class='b-detail-discount'>
+                    <text>送<text class='big'>{{data.cardReturn}}</text>元</text>
+                </view> -->
+            </view>
+    </view>
+     <!-- 次卡样式 -->
+     <view class='card-list' wx:if='{{ data.cardType == 2 }}'>
+        <view class='order-card'>
+            <text class='b-detail-title'>{{data.shopName}}</text>
+            <view class='order-card-line'></view>
+             <image src="{{data.headImgUrlPress || '/resources/default.png'}}" class='card-owner-img' style='bottom:49px'></image>
+                <text class='card-owner-name' style='bottom:70px;'>{{data.nickName}}</text>
+                <image src="{{data.sex == '0' ? '/resources/gril.png' : '/resources/man.png'}}" class='card-owner-sex' style='bottom:54px;'></image>
+            <view class='b-detail-discount1'>
+                <text style='margin-right:30rpx;'>可消费次数<text style='font-size:18px;font-weight:bold;padding:0 10rpx;'>{{data.cardReturn}}</text>次</text>
+                <view>每次立省
+                <text style='font-size:53px;padding:0 30rpx;'>{{data.countOriginalAmount - data.countActualAmount}}</text>元
+                </view>
+            </view>
+        </view>
+    </view>
+    <form >
+        <view class='pay-count' wx:if='{{data.cardType == 0 || data.cardType == 1}}'>
+            <text class='pay-icon'>¥</text>
+            <input bindinput="inputAmount" value='{{Amount}}' placeholder='请输入账单原始金额'></input>
+        </view>
+        <view class='card-pay-info' wx:if='{{data.cardType == 2}}' style='height:80rpx'>
+            <view class='card-pay-count'>
+                <view class='card-pay-left'>
+                    <text>消费次数</text>
+                </view>
+                <view class='card-pay-right'>
+                    <view class='reduce' bindtap='bindMinus'>-</view>
+                    <input bindinput="inputCount" value='{{count}}' style='width:40%;float:left;text-align:center'></input>
+                    <view class='Plus' bindtap='bindPlus'>+</view>
+                </view>
+            </view>
+        </view>
+    </form>
+    <view class='card-pay-info' wx:if='{{data.cardType == 0 }}'>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>支付金额</text>
+            </view>
+            <view class='card-pay-right'>
+                <text class='right-color'>{{zhifuAmount}}元</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>尊享折扣</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>{{data.cardRate ||data.cardRate || 0}}折</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>优惠金额</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>{{youhuiAmount}}元</text>
+            </view>
+        </view>
+    </view>
+    <view class='card-pay-info' wx:if='{{data.cardType == 1 }}'>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>实际支付金额</text>
+            </view>
+            <view class='card-pay-right'>
+                <text class='right-color'>{{zhifuAmount}}元</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>尊享折扣</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>{{data.cardRate ||data.cardRate || 0}}折</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>优惠金额</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>{{youhuiAmount}}元</text>
+            </view>
+        </view>
+    </view>
+    <view class='card-pay-info' wx:if='{{data.cardType == 2 }}' style='height:auto'>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>实际支付金额</text>
+            </view>
+            <view class='card-pay-right'>
+                <text class='right-color'>{{data.countActualAmount * count }}元</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>原价每次消费</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>{{data.countOriginalAmount}}元/次</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>实际每次消费</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>{{data.countActualAmount}}元/次</text>
+            </view>
+        </view>
+        <view class='card-pay-count'>
+            <view class='card-pay-left'>
+                <text>优惠金额</text>
+            </view>
+            <view class='card-pay-right'>
+                <text>{{(data.countOriginalAmount - data.countActualAmount) * count}}元</text>
+            </view>
+        </view>
+    </view>
+    <view class='pay-way'>
+        <view class='pay-way-text'>
+            <text>支付方式</text>
+        </view>
+        <view class='pay-way-main'>
+            <view class='pay-way-left'>
+                <image src='/resources/mycard.png' class='pay-way-icon'></image>
+                <text>余额支付</text>
+            </view>
+            <view class='pay-way-right'>
+                <image src='/resources/salepay_but_select.png' class='pay-way-next'></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='pay-way-btn'>
+    <button class='new-card' bindtap='toRecharge'>充值</button>
+    <button class='pay-confirm' bindtap='zhifu'>确认支付</button>
+</view>
+<!-- 弹框提示 -->
+<view class='mask' wx:if="{{yue}}">
+    <view class='modalDlg'>
+        <view class='prompt-message'>
+            <text>储值卡余额不足以支付消费订单购卡享受优惠吧~~</text>
+        </view>
+        <view class='prompt-btn'>
+            <view class='again-btn'>重新输入</view>
+            <view class='buycard-btn'>购卡</view>
+        </view>
+    </view>
+</view>

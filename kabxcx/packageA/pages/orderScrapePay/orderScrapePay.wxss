@@ -1,0 +1,243 @@
+/* pages/orderScrapePay/orderScrapePay.wxss */
+page{
+  background: #fff;
+}
+.con{
+  padding-bottom: 80px;
+}
+.card-list{
+  width: 100%;
+  height: auto;
+}
+.card-list-info{
+  width: 93%;
+  height: 35px;
+  margin: 0 auto;
+}
+.card-list-left{
+  width: 50%;
+  height: 35px;
+  float: left;
+  text-align: left;
+  color: #4b4949;
+  font-size: 13px;
+  line-height: 35px;
+  letter-spacing: 2px;
+}
+.card-list-right{
+  width: 50%;
+  height: 35px;
+  float: left;
+  text-align: right;
+  color: #4b4949;
+  font-size: 13px;
+  line-height: 35px;
+  letter-spacing: 2px;
+}
+.card-list-main{
+  width: 93%;
+  height: 205px;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+}
+.card-income{
+  position: absolute;
+  bottom: 60px;
+  right: 5%;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.pay-count{
+  width: 90%;
+  height: 60px;
+  margin: 0 auto;
+  border-bottom: 1px solid #EAE8E8;
+  position: relative;
+}
+.see-more{
+  width: 90%;
+  height: 20px;
+  margin: 0 auto;
+  text-align: right;
+  color: #4A90E2;
+  font-size: 12px;
+}
+.pay-icon{
+  font-size:26px;
+  color:#000; 
+  position: absolute;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.pay-count input{
+  width: 90%;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: right;
+  font-size: 20px;
+  color: #000;
+}
+.card-pay-info{
+  width: 90%;
+  height: 166px;
+  margin: 10px auto;
+  padding: 10px 0;
+  border-bottom: 1px solid #EAE8E8;
+}
+.card-pay-count{
+  width: 100%;
+  height: 18px;
+  margin-bottom: 10px;
+}
+.card-pay-left{
+  width: 50%;
+  float: left;
+  text-align: left;
+  font-size: 12px;
+  color: #433d3d;
+}
+.card-pay-right{
+  width: 50%;
+  float: left;
+  text-align: right;
+  font-size: 12px;
+  color: #676161;
+}
+.card-pay-right .right-color{
+  color: #221F1F;
+}
+.pay-way{
+  width: 90%;
+  height: 60px;
+  margin: 10px auto;
+}
+.pay-way-text{
+  text-align: center;
+  font-size: 16px;
+  color: #433d3d;
+  margin-top: 52rpx;
+}
+.pay-way-main{
+  width: 100%;
+  height: 36px;
+  margin-top: 10px;
+  text-align: right;
+  color: #949494;
+  line-height: 36px;
+  font-size: 14px;
+}
+.pay-way-left{
+  width: 40%;
+  height: 36px;
+  float: left;
+  text-align: left;
+}
+.pay-way-icon{
+  width: 36px;
+  height: 36px;
+  float: left;
+  margin-right: 10rpx;
+}
+.pay-way-right{
+  float: left;
+  width: 60%;
+  height: 36px;
+}
+
+.pay-way-next{
+  width: 24px;
+  height: 24px;
+  float: right;
+  margin-top: 5px;
+}
+.pay-way-btn{
+  width: 95%;
+  height: 40px;
+  /* margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px; */
+  position: fixed;
+  left: 27rpx;
+  bottom: 30rpx;
+  background-color: #fff;
+}
+.new-card{
+  width: 270rpx;
+  height: 40px;
+  border:1px solid #DBDBDB;
+  background: #DBDBDB;
+  border-radius: 7px;
+  color: #433d3d;
+  font-size: 16px;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  margin-left: 20rpx;
+}
+.pay-confirm{
+  float: right;
+  background: #FDD804;
+  border:1px solid #FDD804;
+  border-radius: 7px;
+  width: 270rpx;
+  height: 40px;
+  font-size: 16px;
+  color: #433D3D;
+  text-align: center;
+  line-height: 40px;
+}
+.gohome{
+  width: 130rpx;
+  height: 40px;
+  float: left;
+  font-size: 12px;
+  text-align: center;
+  background-color: #fff;
+}
+.gohome span{
+  width: 130rpx;
+  display: table;
+}
+.homeico{
+  width: 20px;
+  height: 20px;
+}
+.order-control{
+    height: 100rpx;
+    margin-bottom: 20rpx;
+    /* background: yellow; */
+}
+.consume-count{
+    float: left;
+    text-align: left;
+    font-size: 14px;
+    color: #433D3D;
+    line-height: 100rpx;
+
+}
+.order-num-main{
+    float: right;
+    width: 38%;
+    height: 82rpx;
+
+}
+.order-control-minus{
+    width: 82rpx;
+    height: 82rpx;
+    float: left;
+}
+.order-control-plus{
+    width: 82rpx;
+    height: 82rpx;
+    float: left;
+}
+input[type="number"]{
+    width: 30%;
+    text-align: center;
+    line-height: 82rpx;
+    height: 82rpx;
+    float: left;
+}

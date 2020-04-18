@@ -1,0 +1,19 @@
+<!--使用说明 by cjy-->
+<view class='use-flow'>
+<view  class='use-title'>
+   <text>结账付款操作流程</text>
+</view>
+<text class='use-info'>购买储值卡，到店消费后，进入【我的-储值卡-买单】进行结账或APP扫描商家柜台摆放的二维码，即可进行结账付款；</text>
+</view>
+<view class='use-flow'>
+  <view  class='use-title'>
+   <text>储值卡共享功能</text>
+  </view>
+  <text class='use-info'>可开启储值卡的共享功能，通过设置共享折扣与储值卡原本折扣的折扣差，可获取共享收益，同时也有助于储值卡金额快速花光；</text>
+</view>
+<view class='use-flow'>
+  <view  class='use-title'>
+   <text>开启共享功能流程</text>
+  </view>
+  <text class='use-info'>开启共享功能流程为，进入【个人中心-储值卡列表-储值卡详情-共享折扣设定】，设定储值卡的共享折扣，点击“开启共享”按钮即可共享储值卡。</text>
+</view>

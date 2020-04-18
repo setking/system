@@ -1,0 +1,705 @@
+<!--购卡支付结果-->
+<wxs module="filters" src="../../utils/toFixed.wxs"></wxs>
+<view class='pay-container'>
+    <button class='list-main-left' wx:if="{{data.orderType==3}}" open-type="share">
+        <image src='/resources/icon_share.png' bindtap='openShare' class='share-icon'></image>
+    </button>
+    <view class='pay-main'>
+        <view wx:if="{{data.cardType == 2 && data.orderType == 2}}">
+            <view style='text-algin:center;font-size:14px;color:#252525;height:40rpx;'>消费次数</view>
+            <view style='text-algin:center;font-size:20px;color:#333;'>
+                <text style='font-size:64px;padding:0 20rpx;'>{{data.actualCount}}</text>次
+            </view>
+        </view>
+        <view wx:if="{{data.cardType == 2 && data.orderType == 3}}">
+            <view style='text-algin:center;font-size:14px;color:#252525;height:40rpx;'>消费次数</view>
+            <view style='text-algin:center;font-size:20px;color:#333;'>
+                <text style='font-size:64px;padding:0 20rpx;'>{{data.actualCount}}</text>次
+            </view>
+        </view>
+        <view wx:if="{{data.orderType ==1 && data.cardType == 2}}">
+            <view style='text-algin:center;font-size:14px;color:#252525;height:40rpx;'>可使用次数</view>
+            <view style='text-algin:center;font-size:20px;color:#333;'>
+                <text style='font-size:64px;padding:0 20rpx;'>{{data.cardFaceReturn}}</text>次
+            </view>
+        </view>
+        <view wx:if="{{data.orderType ==0 && data.cardType == 2}}">
+            <view style='text-algin:center;font-size:14px;color:#252525;height:40rpx;'>可使用次数</view>
+            <view style='text-algin:center;font-size:20px;color:#333;'>
+                <text style='font-size:64px;padding:0 20rpx;'>{{data.cardFaceReturn}}</text>次
+            </view>
+        </view>
+        <view wx:if="{{data.cardType == 0 || data.cardType == 1}}">
+            <text class='pay-sign'>￥</text>
+            <text class='pay-num'>{{data.originalPrice}}</text>
+        </view>
+        <view class='pay-success'>
+            <image src='/resources/pay_success.png' class='pay-icon'></image>
+            <text class='pay-text' wx:if="{{data.orderType==0}}">购卡并支付成功</text>
+            <text class='pay-text' wx:if="{{data.orderType==1}}">充值并支付成功</text>
+            <text class='pay-text' wx:if="{{data.orderType==2}}">支付成功</text>
+            <text class='pay-text' wx:if="{{data.orderType==3}}">支付成功</text>
+            <text class='pay-text' style='display:none'>购卡并支付成功</text>
+            <text class='pay-text' style='display:none'>购卡并支付成功</text>
+            <text class='pay-text' style='display:none'>支付成功</text>
+            <text class='pay-text' style='display:none'>支付成功</text>
+        </view>
+    </view>
+</view>
+<!-- 自用支付详情 -->
+<view class='pay-info' wx:if="{{data.cardType==0 && data.orderType == 2}}">
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>商家名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.shopName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>购买商品</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>支付金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.actualPrice}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>储值卡余额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardAmount}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view>
+</view>
+<view class='pay-info' wx:if="{{data.cardType==1 && data.orderType == 2}}">
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>商家名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.shopName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>实际支付金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.actualPrice}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>优惠金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.originalPrice - data.actualPrice}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>储值卡名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view>
+    <!-- <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view> -->
+</view>
+<view class='pay-info' wx:if="{{data.cardType==2 && data.orderType == 2 }}">
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>商家名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.shopName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>实际支付金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.actualPrice}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>优惠金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{(data.countOriginalAmount - data.countActualAmount) * data.actualCount}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>储值卡名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>交易单号</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.orderNum}}</text>
+        </view>
+    </view>
+</view>
+
+<!-- 充值成功 -->
+<!-- 充送卡充值成功 -->
+<view class='pay-info' wx:if="{{data.orderType==1 && data.cardType == 1}}">
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>商家名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.shopName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>购买商品</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>实际支付金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.originalPrice}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>储值卡余额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardAmountRemain}}</text>
+        </view>
+    </view>
+
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>交易单号</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.orderNum}}</text>
+        </view>
+    </view>
+</view>
+<!-- 折扣卡充值支付成功 -->
+<view class='pay-info' wx:if="{{data.orderType==1 && data.cardType == 0}}">
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>商家名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.shopName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>购买商品</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>实际支付金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.originalPrice}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>储值卡余额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardAmountRemain}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>交易单号</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.orderNum}}</text>
+        </view>
+    </view>
+</view>
+<!-- 次卡充值支付成功 -->
+<view class='pay-info' wx:if="{{data.orderType==1 && data.cardType == 2}}">
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>商家名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.shopName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>购买商品</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>实际支付金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.originalPrice}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left' style="width: 40%">
+            <text>储值卡可使用次数</text>
+        </view>
+        <view class='pay-list-right' style="width: 60%">
+            <text>{{data.cardCountRemain}}次</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>原价每次消费</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.countOriginalAmount}}元/次</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>现价每次消费</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.countActualAmount}}元/次</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>交易单号</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.orderNum}}</text>
+        </view>
+    </view>
+</view>
+<!-- 蹭卡支付详情 -->
+<!-- 折扣卡支付详情 -->
+<view class='pay-info' wx:if="{{data.orderType == 3 && data.cardType == 0}}">
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>商家名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费原价</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.originalPrice}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>尊享折扣</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.shareRate}}折</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>优惠金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.preferentialAmount}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>实际支付金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.actualPrice}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view>
+</view>
+<!-- 充送卡支付成功 -->
+<view class='pay-info' wx:if="{{data.orderType == 3 && data.cardType == 1}}">
+
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>优惠金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.preferentialAmount}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>实际支付金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.actualPrice}}元</text>
+        </view>
+    </view>
+
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>商家名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>交易单号</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.orderNum}}</text>
+        </view>
+    </view>
+</view>
+<!-- 次卡蹭卡支付成功 -->
+<view class='pay-info' wx:if="{{data.orderType == 3 && data.cardType == 2}}">
+
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>商家名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.shopName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>实际支付金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardAmountOut}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>优惠金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{(data.countOriginalAmount - data.countActualAmount) * data.actualCount}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>储值卡名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>交易单号</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.orderNum}}</text>
+        </view>
+    </view>
+</view>
+<!-- 购卡成功页面 -->
+<view class='pay-info' wx:if="{{data.orderType == 0 && data.cardType == 0}}">
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>商家名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.shopName}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>购买商品</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardName}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>实际支付金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardAmount}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>储值卡余额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.actualPrice}}元</text>
+        </view>
+    </view>
+    
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>交易单号</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.orderNum}}</text>
+        </view>
+    </view>
+</view>
+<view class='pay-info' wx:if="{{data.orderType == 0 && data.cardType == 1}}">
+
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>商家名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.shopName}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>购买商品</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardName}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>实际支付金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardAmount}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>储值卡余额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.actualPrice}}元</text>
+        </view>
+    </view>
+    
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>交易单号</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.orderNum}}</text>
+        </view>
+    </view>
+</view>
+<view class='pay-info' wx:if="{{data.orderType == 0 && data.cardType == 2}}">
+
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>商家名称</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.shopName}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>购买商品</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardName}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>实际支付金额</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.cardAmount}}元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left' style="width: 40%">
+            <text>储值卡可使用次数</text>
+        </view>
+        <view class='pay-list-right' style="width: 60%">
+            <text>{{data.cardCountRemain}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>原价每次消费</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.countOriginalAmount}}次/元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>办卡每次消费</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.countActualAmount}}次/元</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>消费时间</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.createTime}}</text>
+        </view>
+    </view>
+    <view class='pay-list'>
+        <view class='pay-list-left'>
+            <text>交易单号</text>
+        </view>
+        <view class='pay-list-right'>
+            <text>{{data.orderNum}}</text>
+        </view>
+    </view>
+</view>
+<view class='bottom-img' wx:if="{{data.orderType==3}}">
+    <image src='/resources/ck3x.png' mode='widthFix' bindtap='toCusIncome'></image>
+</view>
+<view class='bottom-img' wx:else>
+    <image src='/resources/sk.png' mode='widthFix' bindtap='toCusInfo'></image>
+</view>
+
+<canvas canvas-id='share' class='share' style='width:320px;height:250px;'>
+</canvas>
+<!-- 购卡成功弹窗 -->
+<!-- <view class='mask' wx:if="{{show}}">
+  <view class='modalDlg'>
+    <view class='prompt-message'>
+      <text>分享给大家一起用吧!\n</text>
+      <text>最多赚取{{filters.toFix((9.5-data.cardRate)*0.1*data.cardAmount)}}元</text>
+    </view>
+    <view class='prompt-btn'>
+      <view class='again-btn' bindtap='jujue'>残忍拒绝</view>
+      <view class='buycard-btn' bindtap='fenxian'>分享给好友</view>
+    </view>
+  </view>
+</view> -->

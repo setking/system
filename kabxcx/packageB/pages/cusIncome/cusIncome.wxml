@@ -1,0 +1,78 @@
+<!--消费明细页面  by cjy-->
+ <view class="cardTab">
+    <view class='card-main-tab'>
+      <!-- <text wx:for="{{['自用','共享','充值']}}" wx:key="index" class="{{state == index ? 'activeState' : ''}}" data-index="{{index}}" bindtap='tab'>{{item}}</text> -->
+      <text class='{{state == 0?"activeState":""}}' bindtap='tabqh' id="0">自用</text>
+      <text class='{{state == 1?"activeState":""}}' bindtap='tabqh' id='1'>共享</text>
+      <text class='{{state == 2?"activeState":""}}' bindtap='tabqh' id='2'>充值</text>
+    </view>
+  </view>
+
+  <view hidden="{{state != 0}}">
+   
+    <view class='person-list-main' wx:for="{{perlist}}" wx:key="{{index}}" id="{{item.id}}" bindtap='toPerDetail'>
+      <view class='person-list-left'>
+        <image src='/resources/orderlist_self.png' class='person-img'></image>
+        <view class='person-title'>自用消费\n</view>
+        <view class='person-time'>{{item.createTime}}</view>
+      </view>
+      <view class='person-list-right'>
+        <text>-{{item.cardAmountOut }}</text>
+      </view>
+    </view>
+   
+    <view class='no-card' wx:if="{{perlist.length == 0}}">
+      <image src='/resources/noShop.png'></image>
+      <view class='no-text'>
+        <text>目前暂无自用消费信息</text>
+      </view> 
+    </view>
+  
+  </view>
+  <view hidden="{{state != 1}}">
+    <view class='person-list-main' wx:for="{{sharelist}}" wx:key="{{index}}" id="{{item.id}}" bindtap='toShareDetail'>
+      <view class='person-list-left'>
+        <image src='/resources/orderlist_share.png' class='person-img'></image>
+        <view class='person-title'>共享消费\n</view>
+        <view class='person-time'>{{item.createTime}}</view>
+      </view>
+      <view class='person-list-right'>
+        <text>-{{item.actualPrice}}</text>
+      </view>
+    </view>
+
+    <view class='no-card' wx:if="{{sharelist.length == 0}}">
+      <image src='/resources/noShop.png'></image>
+      <view class='no-text'>
+        <text>目前暂无共享消费信息</text>
+      </view> 
+    </view>
+  
+   </view>
+   <view hidden="{{state != 2}}">
+    <view class='person-list-main'  wx:for="{{rechangelist}}" wx:key="{{index}}" id="{{item.id}}" bindtap='toRechageDetail'>
+      <view class='person-list-left'>
+        <image src='/resources/orderlist_recharge.png' class='person-img'></image>
+        <view class='person-title'>充值卡充值\n</view>
+        <view class='person-time'>{{item.createTime}}</view>
+      </view>
+      <view class='person-list-right'>
+        <text>+{{item.actualPrice}}</text>
+      </view>
+    </view>
+
+    <view class='no-card' hidden="{{rechangelist.length != 0}}">
+      <image src='/resources/noShop.png'></image>
+      <view class='no-text'>
+        <text>目前暂无充值消费信息</text>
+      </view> 
+    </view>
+    <!-- end -->
+   </view>
+  
+  <!-- 充值列表 -->
+  <!-- <view class='rechaege-list' wx:if="{{state == 2}}"> -->
+  <!-- {{state}} -->
+ 
+  <!-- </view> -->
+    

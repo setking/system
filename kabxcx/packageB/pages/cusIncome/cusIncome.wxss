@@ -1,0 +1,91 @@
+/* pages/cusIncome/cusIncome.wxss */
+page{
+  background:#fff;
+}
+.cardTab{
+  width: 100%;
+  height: 40px;
+}
+.card-main-tab{
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.card-main-tab text{
+  margin: 0 40rpx;
+  font-size: 16px;
+  color: #4B4949;
+  letter-spacing: 1.61px;
+  padding-bottom: 8rpx;
+}
+.card-main-tab text:last-child{
+  margin-right: 0;
+}
+.activeState{
+  border-bottom: 2px solid #333;
+  color: #333;
+  font-weight: 700;
+}
+.person-list,.share-list,.rechaege-list{
+  width: 100%;
+  height: auto;
+  /* display: none; */
+}
+.person-list-main{
+  width: 90%;
+  height: 38px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.person-list-left{
+  width: 70%;
+  height: 38px;
+  float: left;
+}
+.person-img{
+  width: 38px;
+  height: 38px;
+  float: left;
+  margin-right: 20rpx;
+}
+.person-title{
+  color: #433D3D;
+  font-size: 11px;
+  letter-spacing: 0.48px;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+.person-time{
+  color: #9b9898;
+  font-size: 11px;
+  letter-spacing: 0.48px;
+  margin-left: 20rpx;
+}
+.person-list-right{
+  width: 30%;
+  height: 38px;
+  float: left;
+  color: #B1ADAD;
+  letter-spacing: 0.74px;
+  font-size: 17px;
+  text-align: right;
+  line-height: 38px;
+}
+.no-card{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.no-card image{
+  width: 178px;
+  height: 176px;
+  margin: 40px auto;
+  display: block;
+}
+.no-text{
+  text-align: center;
+  font-size: 17px;
+  color: #d7d7d7;
+  letter-spacing: 1px;
+}

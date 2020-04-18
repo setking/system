@@ -1,0 +1,136 @@
+/**index.wxss**/
+
+.map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cover-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 99;
+}
+
+.list {
+  position: fixed;
+  top: 5rpx;
+  right: 5rpx;
+}
+
+.me {
+  position: fixed;
+  top: 5rpx;
+  left: 5rpx;
+}
+
+.location {
+  position: absolute;
+  bottom: 25rpx;
+  left: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 40rpx;
+}
+
+.qrcode {
+  position: absolute;
+  bottom: 25rpx;
+  right: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 40rpx;
+}
+
+.swiper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.swiper .swiper_li {
+  padding: 25rpx 10rpx;
+  box-sizing: border-box;
+}
+
+.swiper .siwper_con {
+  background: #fff;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+
+.shop_title {
+  font-family: PingFangSC-Medium;
+  font-size: 16px;
+  color: #424242;
+  letter-spacing: 0;
+}
+
+.siwper_con .head_logo {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.swiper_li_con {
+  padding: 25rpx;
+  box-sizing: border-box;
+  border: 1px #eee solid;
+  border-right: none;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+
+.discout {
+  background: #fdd804;
+  padding: 25rpx;
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 15px;
+  color: #424242;
+  letter-spacing: 0;
+}
+
+.shop_desc {
+  font-family: PingFangSC-Regular;
+  font-size: 11px;
+  color: #9fa2b3;
+  letter-spacing: 0;
+}
+
+.shop_count {
+  font-size: 41px;
+  color: #424242;
+  margin-left: 10rpx;
+  letter-spacing: 1.79px;
+}
+
+.discout .discount_title {
+  font-size: 47px;
+  color: #424242;
+  letter-spacing: 0;
+}
+
+.mar-left {
+  margin-left: 30rpx;
+}
+
+.mar-right {
+  margin-right: 30rpx;
+}
+
+.shop_desc view {
+  margin-bottom: 15rpx;
+}
+
+canvas {
+width:130rpx;
+height:130rpx;
+
+}

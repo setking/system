@@ -1,0 +1,11 @@
+<view class = "flex column middle center container">
+  <view class ="flex middle center column">
+    <image src = '../../resources/noShop.png' class = "block img"></image>
+    <text class = 'text'>暂无共享卡主，快来成为\n
+第一个共享小卡主吧~~</text>
+  </view>
+  <view class = 'auto btn-area mar'>
+    <button bindtap='showDLog'>成为卡主</button>
+    <text class = 'desc'>成为卡主，享受更低折扣</text>
+  </view>
+</view>

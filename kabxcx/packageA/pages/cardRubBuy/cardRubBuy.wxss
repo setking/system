@@ -1,0 +1,236 @@
+.cardTab{
+  text-align: center;
+  margin: 40rpx 0;
+}
+.cardTab text{
+  margin: 0 30rpx;
+  font-size: 16px;
+  color: #4B4949;
+  letter-spacing: 1.61px;
+  padding-bottom: 8rpx;
+}
+.activeState{
+  border-bottom: 2px solid #333;
+  color: #333;
+  font-weight: 700;
+}
+.cardlist1 {
+  width: 660rpx;
+  height: 354rpx;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 40rpx;
+}
+.cardlist1 .bj{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.cardlist1 .title{
+  position: absolute;
+  top: 40rpx;
+  left: 40rpx;
+  font-size: 16px;
+  color: #fff;
+}
+.cardlist1 .msg{
+  width: 95%;
+  left: 5%;
+  bottom: 61rpx;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.cardlist1 .msg2{
+  left: 5%;
+  bottom: 32px;
+  position: absolute;
+  font-size: 14px;
+  color: #fff;
+}
+.cardlist1 .msg2 text{
+  font-size: 34px;
+}
+.cardlist1 .msg .headPic{
+  width: 84rpx;
+}
+.cardlist1 .msg view .sex{
+  width: 50rpx;
+}
+.cardlist1 .msg .msg_view{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-size: 14px;
+}
+.cardlist1 .msg .msg_view view{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.msg_ri{
+  font-size: 14px;
+  flex: 1;
+}
+.noGoods image{
+  width: 60%;
+  margin: 50rpx 0 50rpx;
+}
+.noGoods{
+  text-align: center;
+}
+.noGoods view{
+  font-size: 14px;
+  color: #4B4949;
+  letter-spacing: 1.41px;
+  opacity: 0.65;
+  margin-bottom: 40rpx;
+}
+.noGoods text{
+  color: #ADADAD;
+  font-size: 12px;
+}
+.noGoods button{
+  background: #FFD006;
+  width: 90%;
+  margin-top: 80rpx;
+  margin-bottom: 30rpx;
+}
+.msg_img{
+  width: 84rpx;
+  height: 84rpx;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.b-details{
+  width: 100%;
+  height: 340rpx;
+}
+.b-info{
+  width: 90%;
+  height: 66px;
+  margin: 0 auto;
+}
+.b-info-img{
+  width: 60px;
+  height: 60px;
+  float: left;
+  border-radius: 50%;
+}
+.b-info-right{
+  float: left;
+  margin-top: 10px;
+  margin-left:10px; 
+}
+.b-info-name{
+  display: block;
+  font-size: 16px;
+  color: #4B4949;
+  text-align: left;
+}
+.b-info-hours{
+  display: block;
+  font-size: 13px;
+  color: rgba(75, 73, 73, 0.6);
+  text-align: left;
+  margin-top: 5px;
+}
+.b-phone{
+  width: 90%;
+  height: auto;
+  margin: 0 auto;  
+}
+.b-phone>text{
+  font-size: 13px;
+  color: #4B4949;
+  text-align: left;
+}
+.b-address{
+  width: 90%;
+  height: 72rpx;
+  margin: 10px auto;
+}
+.b-address-left{
+  width: 80%;
+  height: 100%;
+  float: left;
+  color: #4B4949;
+  font-size: 13px;
+  line-height: 72rpx;
+}
+.b-address-right{
+  float: left;
+}
+.b-address-img{
+  width: 66rpx;
+  height: 66rpx;
+  margin-left: 20rpx;
+}
+.no-card{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+
+  
+}
+.no-card image{
+  width: 178px;
+  height: 176px;
+  margin: 40px auto;
+  display: block;
+}
+.no-text{
+  text-align: center;
+  font-size: 17px;
+  color: #d7d7d7;
+  letter-spacing: 1px;
+}
+
+.nav {
+  height: 45px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 42px;
+  background: #fff;
+  font-size: 16px;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-item {
+  width: 32%;
+  display: inline-block;
+  text-align: center;
+}
+
+.nav-item.active {
+  color: #000;
+  border-bottom: 3px #000 solid;
+  font-weight: bold;
+}
+
+.tab-box {
+  background: #fff;
+  margin-top: 50px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.tab-content {
+  overflow-y: scroll;
+}
+
+
+
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

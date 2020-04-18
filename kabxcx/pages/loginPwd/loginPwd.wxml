@@ -1,0 +1,20 @@
+<!--pages/loginPwd/loginPwd.wxml-->
+<view class="container">
+    <form bindsubmit="formSubmit">
+        <form bindsubmit="formsend">
+            <view class="section">
+                <input name="mobile" id='mobile' placeholder="请输入账号" bindinput="getMobile" />
+            </view>
+            <view class="flex middle section">
+                <input name="password" placeholder="请输入密码" type='password' bindinput="getPwd" />
+            </view>
+        </form>
+        <view class="btn-area">
+            <button open-type="getUserInfo" bindgetuserinfo="formSubmit">登录</button>
+            <view class='usePass' bindtap='login'>验证码登录</view>
+        </view>
+    </form>
+    <view class='info' bindtap='userAgreement'>点击登录/注册即表示同意
+        <text style='color:#003A00'>《卡不多用户协议》</text>
+    </view>
+</view>

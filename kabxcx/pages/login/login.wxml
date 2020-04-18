@@ -1,0 +1,25 @@
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <form bindsubmit="formsend">
+      <view class="section">
+        <input name="mobile" id='mobile' placeholder="请输入手机号" bindblur="bindblur" pattern="[0-9]*" type='number' maxlength='11' />
+      </view>
+      <view class="flex middle section">
+        <input name="verifyCode" bindblur="bindverifyCode" placeholder="请输入验证码" pattern="[0-9]*" type='number' />
+        <view class="auto btn-area">
+          <button formType="submit" wx:if='{{sendFlag}}'>{{ codeText }}</button>
+          <button class="disabled" wx:else>{{ codeText }}</button>
+        </view>
+      </view>
+    </form>
+    <view class="btn-area">
+      <button open-type="getUserInfo" bindgetuserinfo="formSubmit">登录</button>
+      <button open-type="getPhoneNumber" style='margin-top: 20rpx;' bindgetphonenumber="getPhoneNumber">一键授权登录</button>
+      <view class='usePass' bindtap='loginPwd'>账号密码登录</view>
+    </view>
+  </form>
+  <view class='info' bindtap='userAgreement'>点击登录/注册即表示同意
+    <text style='color:#003A00'>《卡不多用户协议》</text>
+  </view>
+</view>
+

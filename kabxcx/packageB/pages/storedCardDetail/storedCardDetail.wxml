@@ -1,0 +1,98 @@
+<!--储值卡详情 by cjy-->
+<view class=''>
+    <view class='card-list-main-test' wx:if='{{ data.cardType == 0 }}'>
+        <view class='card-main' >
+            <!-- <image src='http://payp.kabuduo.cn/img/s2/{{data.cardRate}}.png' class='card-img'></image> -->
+            <text class='card-name'>{{data.shopName}}</text>
+            <view class='big-font'>{{big}}</view>
+            <view class='card-point'>.</view>
+            <view class='small-font'>{{small || '0'}}</view>
+            <view class='balance-font'>折</view>
+            <view class='card-line'></view>
+            <text class='card-balance'>余额:{{data.cardAmount }}</text>
+            <text class='card-income'>累计收益:{{data.shareAmountIn}}</text>
+        </view>
+    </view>
+    <!-- 次卡样式 -->
+     <view class='card-list-main-test' wx:if='{{ data.cardType == 2 }}'>
+        <view class='order-card'>
+            <text class='b-detail-title'>{{data.shopName}}</text>
+            <view class='order-card-line'></view>
+            <view class='b-detail-discount'>
+                <text style='margin-right:30rpx;'>可消费次数<text style='font-size:18px;font-weight:bold;padding:0 10rpx;'>{{data.cardReturn}}</text>次</text>
+                <text>每次立省</text>
+                <text style='font-size:53px;padding:0 30rpx;'>{{data.countOriginalAmount - data.countActualAmount}}</text>元
+            </view>
+        </view>
+    </view>
+    <!-- 充送卡样式 -->
+    <view class='card-list-main-test' wx:if='{{data.cardType == 1}}'>
+        <view class='recharge-card' bindtap='toRechargeDetail'>
+                <text class='b-detail-title'>{{data.shopName}}</text>
+                <view class='big-font'>{{big}}</view>
+                <view class='card-point'>.</view>
+                <view class='small-font'>{{small || '0'}}</view>
+                <view class='balance-font'>折</view>
+                <view class='recharge-card-line'></view>
+                <text class='card-balance'>余额:{{data.cardAmount }}</text>
+                <text class='card-income'>累计收益:{{data.shareAmountIn}}</text>
+            </view>
+    </view>
+    <view class='card-info'>
+        <view class='card-info-main'>
+            <!-- 共享折扣设定 -->
+            <view class='card-setting' bindtap='toDiscountSet'>
+                <view class='card-setting-left'>
+                    <text>共享折扣设定</text>
+                </view>
+                <view class='card-setting-right'>
+                    <text wx:if='{{data.isCardShare  == 1}}'>{{data.shareRate }}折</text>
+                    <image src='/resources/icon_next.png' class='next'></image>
+                </view>
+            </view>
+            <!-- 消费明细 -->
+            <view class='card-setting' bindtap='tocusIncom' id='{{data.id}}'>
+                <view class='card-setting-left'>
+                    <text>消费明细</text>
+                </view>
+                <view class='card-setting-right'>
+                    <image src='/resources/icon_next.png' class='next'></image>
+                </view>
+            </view>
+            <!-- 使用说明 -->
+            <view class='card-setting' bindtap='toRule'>
+                <view class='card-setting-left'>
+                    <text>使用说明</text>
+                </view>
+                <view class='card-setting-right'>
+                    <image src='/resources/icon_next.png' class='next'></image>
+                </view>
+            </view>
+            <!-- 年收益化 -->
+            <view class='card-setting'>
+                <view class='card-setting-left'>
+                    <text>年收益化</text>
+                </view>
+                <view class='card-setting-right'>
+                    <text>{{data.shareEarnRate}}%</text>
+                </view>
+            </view>
+            <!-- 共享状态 -->
+            <view class='card-setting'>
+                <view class='card-setting-left'>
+                    <text>共享状态</text>
+                </view>
+                <view class='card-setting-right'>
+                    <switch bindchange="switch1Change" color='#FDD804' wx:if="{{data.isCardShare==0}}"></switch>
+                    <switch bindchange="switch2Change" checked color='#FDD804' wx:if="{{data.isCardShare==1}}"></switch>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='card-btn'>
+        <view class='card-btn-main'>
+            <view class='recharge-btn' bindtap='toCardScrapePay'>充值</view>
+            <view class='pay-btn' bindtap='toCardPrePay'>买单</view>
+        </view>
+    </view>
+</view>

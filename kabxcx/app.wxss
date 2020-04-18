@@ -1,0 +1,406 @@
+/**app.wxss**/
+
+.container {
+    height: 100vh;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.icon {
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex>view {
+    flex: 1;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.middle {
+    align-items: center;
+}
+
+.flex.bottom {
+    align-items: flex-end;
+}
+
+.flex.center {
+    justify-content: center;
+}
+
+.flex .auto {
+    flex: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section {
+    border-bottom: 1rpx solid #d8d8d8;
+}
+
+.section input {
+    outline: none;
+    border: none;
+    height: 3em;
+    padding-left: 1em;
+    box-sizing: border-box;
+    line-height: 3em;
+}
+
+.btn-area {
+    padding: 10rpx;
+    box-sizing: border-box;
+}
+
+.btn-area button {
+    border: none;
+    background: #ffd006;
+    box-shadow: 0 2px 4px 0 #f5d136;
+    border-radius: 8px;
+}
+
+page {
+    background: #fff;
+}
+
+.block {
+    display: block;
+}
+
+.card-list-main-test {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-main {
+    width: 700rpx;
+    height: 394rpx;
+    background: #fdd804;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 20rpx;
+    position: relative;
+}
+
+.big-font {
+    width: 100rpx;
+    height: 394rpx;
+    position: absolute;
+    left: 30%;
+    top: -141rpx;
+    font-size: 494rpx;
+    color: #fff;
+    font-family: SFNSDisplay-Regular;
+}
+
+.card-line {
+    width: 700rpx;
+    height: 96rpx;
+    background: rgba(177, 119, 56, 0.55);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.26);
+    position: absolute;
+    top: 220rpx;
+    left: 0;
+}
+
+.card-point {
+    position: absolute;
+    top: 73rpx;
+    left: 69%;
+    font-size: 134rpx;
+    color: #fff;
+}
+
+.small-font {
+    font-size: 140rpx;
+    color: #fff;
+    position: absolute;
+    top: 67rpx;
+    right: 15%;
+}
+
+.balance-font {
+    font-size: 65rpx;
+    color: #fff;
+    position: absolute;
+    top: 137rpx;
+    right: 5%;
+}
+
+.card-name {
+    position: absolute;
+    top: 10px;
+    left: 4%;
+    color: #fff;
+    font-size: 14px;
+}
+
+.card-status {
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    width: 47px;
+    height: 20px;
+    border-radius: 10px;
+    background: #b17738;
+    color: #fff;
+    font-size: 11px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.card-balance {
+    position: absolute;
+    bottom: 55px;
+    left: 5%;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.card-income {
+    position: absolute;
+    bottom: 55px;
+    right: 5%;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.card-owner-name {
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    left: 20%;
+    bottom: 62px;
+}
+
+.card-owner-years {
+    font-size: 9px;
+    color: #fff;
+    position: absolute;
+    left: 25%;
+    bottom: 52px;
+}
+
+.card-owner-sex {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    left: 20%;
+    bottom: 42px;
+}
+
+.card-owner-img {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 4%;
+    bottom: 45px;
+    border-radius: 21px;
+}
+
+.b-detail-title {
+    font-size: 21px;
+    color: #fff;
+    z-index: 66;
+    position: absolute;
+    top: 20px;
+    left: 4%;
+}
+
+.b-detail-discount {
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    left: 4%;
+    bottom: 92rpx;
+    z-index: 66;
+}
+
+.big {
+    font-size: 32px;
+}
+
+/* 次卡消费样式 */
+
+.order-card {
+    width: 700rpx;
+    height: 394rpx;
+    background: #8cd93a;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 20rpx;
+    position: relative;
+    box-shadow: 0 4px 4px 0 rgba(61, 73, 48, 0.20);
+}
+
+/* 次卡横线样式 */
+
+.order-card-line {
+    width: 700rpx;
+    height: 96rpx;
+    background: #40a158;
+    box-shadow: 0 2px 4px 0 rgba(104, 130, 109, 0.60);
+    position: absolute;
+    top: 204rpx;
+    left: 0;
+}
+
+/* 次卡共享样式 */
+
+.order-card-status {
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    width: 47px;
+    height: 20px;
+    border-radius: 10px;
+    background: #13a737;
+    color: #fff;
+    font-size: 11px;
+    line-height: 20px;
+    text-align: center;
+}
+
+/* 次卡横线字体样式 */
+
+.order-card-small-font {
+    width: 144rpx;
+    height: 34rpx;
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    left: 2%;
+    bottom: 121rpx;
+}
+
+.order-card-big-font {
+    font-size: 48px;
+    color: #fff;
+    position: absolute;
+    left: 25%;
+    bottom: 78rpx;
+}
+
+.order-card-yuan {
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    right: 5%;
+    bottom: 101rpx;
+}
+
+.order-card-monetary {
+    color: #fff;
+    position: absolute;
+    left: 40%;
+    bottom: 27rpx;
+    font-size: 13px;
+}
+
+.order-card-type {
+    width: 92rpx;
+    height: 44rpx;
+    font-size: 10px;
+    color: #fff;
+    position: absolute;
+    bottom: 21rpx;
+    right: 5%;
+    text-align: center;
+    line-height: 44rpx;
+    background: #41b15c;
+    border-radius: 6px;
+}
+
+.order-card-owner-img {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 4%;
+    bottom: 97rpx;
+    border-radius: 21px;
+}
+
+.order-card-owner-name {
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    left: 20%;
+    bottom: 138rpx;
+}
+
+.order-card-owner-sex {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    left: 20%;
+    bottom: 98rpx;
+}
+
+.order-card-save {
+    position: absolute;
+    right: 5%;
+    bottom: 110rpx;
+    font-size: 12px;
+    color: #fff;
+}
+
+.order-card-save>text {
+    font-size: 53px;
+    padding: 0 30rpx;
+}
+
+.order-card-info {
+    position: absolute;
+    bottom: 124rpx;
+    color: #fff;
+    left: 3%;
+    font-size: 15px;
+}
+
+/* 冲送卡样式 */
+
+.recharge-card {
+    width: 700rpx;
+    height: 394rpx;
+    background: #f96666;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 20rpx;
+    position: relative;
+    box-shadow: 0 4px 4px 0 rgba(61, 73, 48, 0.20);
+}
+
+.recharge-card-line {
+    width: 700rpx;
+    height: 96rpx;
+    background: rgba(241, 93, 70, 0.3);
+    box-shadow: 0 2px 4px 0 rgba(127, 103, 100, 0.30);
+    position: absolute;
+    top: 204rpx;
+    left: 0;
+}
+
+.rechange-card-status {
+    position: absolute;
+    top: 10px;
+    right: 5%;
+    width: 47px;
+    height: 20px;
+    border-radius: 10px;
+    background: #cd4833;
+    color: #fff;
+    font-size: 11px;
+    line-height: 20px;
+    text-align: center;
+}

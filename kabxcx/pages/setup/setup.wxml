@@ -1,0 +1,21 @@
+<view class = 'container'>
+  <view class = 'flex header'>
+    <view class='userphoto'>
+      <view class='userphoto-title'>当前手机号</view>
+      <view>{{ info.mobile }}</view>
+    </view>
+    <view class = 'auto'>
+      <image class = 'portrait' src= '{{ info.headImgUrlPress?info.headImgUrlPress:"/resources/default.png" }}'></image>
+
+    </view>
+  </view>
+  <view class = 'btn-area'>
+    <block wx:if = '{{ login }}'>
+      <button bindtap = 'changemobile'>更换手机号</button>
+      <button class = 'disabled sigin_out' bindtap = 'changeAccount'>更换账号</button>
+    </block>
+    <block wx:else>
+      <button class = 'sigin_out' bindtap = 'changeAccount'>更换账号</button>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,65 @@
+<!--红卡详情-->
+<view class='b-detail'>
+    <view class="recharge-card">
+        <text class='b-detail-title'>充值300元</text>
+        <view class='big-font'>6</view>
+        <view class='card-point'>.</view>
+        <view class='small-font'>9</view>
+        <view class='balance-font'>折</view>
+        <view class='recharge-card-line'></view>
+        <view class='b-detail-discount'>
+            <text>送<text class='big'>50</text>元</text>
+        </view>
+    </view>
+    <!-- <image src='{{ data.imgSrc }}' class='b-detail-img'></image>
+    <view class='b-detail-title'>
+        <text>充值{{data.cardAmount}}元</text>
+    </view>
+    <view class='b-detail-discount'>
+        <text>立省<text class='big'>{{filters.toFix(data.cardAmount/(data.cardRate*0.1)-data.cardAmount)}}</text>元</text>
+    </view> -->
+</view>
+<view class='card-surplus'>
+    <text>今日剩余次数(10)</text>
+</view>
+<view class='introduce-card'>
+    <text class='introduce-title'>什么是储值卡\n</text>
+    <view class='intro-main'>
+        <text class='introduce-content'>储值卡是商家常用的营销模式的一种,就跟优惠券一样为用户提供更多的优惠福利,用户在办理完卡后到店消费时等同于现金,并且根据储值提供的折扣进行实际使用,结算时使用卡不多App进入【个人中心-储值卡】或者扫一扫进行付款,可享受相应优惠</text>
+    </view>
+</view>
+<view class='introduce-card'>
+    <text class='introduce-title'>充送卡是什么？\n</text>
+    <view class='intro-main'>
+        <text class='introduce-content'>充送卡是以用户充值一定金额，商家赠送一定金额形式的储值卡。</text>
+    </view>
+</view>
+<view class='card-rule'>
+    <text class='card-rule-title'>使用规则</text>
+    <view class='intro-main'>
+        <view class='card-range'>
+            <text class='card-text1'>储值卡使用范围:</text>
+            <text>该储值卡只能在售卡商家处使用;\n</text>
+        </view>
+        <view class='card-range'>
+            <text class='card-text1'>充值额度:</text>
+            <text>每次充值额度为该储值卡的固定额度;\n</text>
+        </view>
+        <view class='card-range'>
+            <text class='card-text1'>优惠举例:</text>
+            <text>购买了1000元8折储值卡,即代表可以实际使用消费1428.57元的产品,也就是说享受了额外的近430元的优惠,如果开启共享功能,将会产生更大的优惠;\n</text>
+        </view>
+        <view class='card-range'>
+            <text class='card-text1'>使用说明:</text>
+            <text>购买了1000元8折储值卡,即代表可以实际使用消费1428.57元的产品,也就是说享受了额外的近430元的优惠,如果开启共享功能,将会产生更大的优惠;\n</text>
+        </view>
+        <view class='card-range'>
+            <text class='card-text1'>限量说明:</text>
+            <text>使用时请用打开app【我的-储值卡】或者扫一扫进行消费,若消费时余额不足,请先进行充值;\n</text>
+        </view>
+    </view>
+</view>
+<view class='card-btn'>
+    <text>¥300</text>
+    <button class='buycard-btn'  bindtap='toRechargeCardPay'>立即购卡</button>
+</view>

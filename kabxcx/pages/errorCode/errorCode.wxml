@@ -1,0 +1,7 @@
+<!--扫码错误 by cjy-->
+<view class='code-main'>
+  <image src='/resources/icon_wrong.png' class='code-img'></image>
+  <view class='code-text'>
+    <text>对不起，当前二维码无法识别！</text>
+  </view>
+</view>

@@ -1,0 +1,88 @@
+<!--充值订单 by cjy-->
+<view class='container'>
+  <view class='per-consume'>
+    <view class='per-consume-main'>
+      <view class='per-consume-left'>
+        <text>充值</text>
+      </view>
+      <view class='per-consume-right'>
+        <text>{{data.actualPrice}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='per-consume-info'>
+  <!-- 交易单号 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>交易单号</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.orderNum}}</text>
+      </view>
+    </view>
+    <!-- 交易时间 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>交易时间</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.createTime}}</text>
+      </view>
+    </view>
+    <!-- c储值卡折扣 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>储值卡折扣</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.cardRate}}折</text>
+      </view>
+    </view>
+    <!-- 会员昵称 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>会员账号</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.cardmaster}}</text>
+      </view>
+    </view>
+    <!-- 支付渠道 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>支付渠道</text>
+      </view>
+      <view class='per-list-right' wx:if="{{data.payType == 0}}">
+        <text>微信</text>
+      </view>
+      <view class='per-list-right' wx:if="{{data.payType == 1}}">
+        <text>支付宝</text>
+      </view>
+      <view class='per-list-right' wx:if="{{data.payType == 2}}">
+        <text>储值卡</text>
+      </view>
+       <view class='per-list-right' wx:if="{{data.payType == 3}}">
+        <text>钱包余额</text>
+      </view>
+    </view>
+    <!-- 商家名称 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>商家名称</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.shopName}}</text>
+      </view>
+    </view>
+    <!-- 储值卡名称 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>储值卡名称</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.cardName}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+

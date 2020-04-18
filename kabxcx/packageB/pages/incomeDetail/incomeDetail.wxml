@@ -1,0 +1,19 @@
+<!--pages/incomeDetail/incomeDetail.wxml-->
+  <view class='person-list'>
+    <view class='no-card' wx:if="{{num == 0}}">
+      <image src='/resources/noShop.png'></image>
+      <view class='no-text'>
+        <text>目前暂无收入明细</text>
+      </view> 
+    </view>
+    <view class='person-list-main' bindtap='toDetail' wx:for="{{list}}" wx:key="{{index}}" id='{{item.id}}' wx:if="{{item.orderType == 3}}">
+      <view class='person-list-left'>
+        <image src='../../../resources/shou.png' class='person-img'></image>
+        <view class='person-title'>共享收入</view>
+        <view class='person-time'>{{item.createTime}}</view>
+      </view>
+      <view class='person-list-right'>
+        <text>+{{item.walletAmountIn}}</text>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,20 @@
+<view class="goodsList">
+  <view class="goodsList_odiv" wx:for="{{list}}" wx:key="index" data-id="{{item.id}}" bindtap="goCard">
+    <view class="goodsList_left">
+      <text class="goodsList_left_head">{{item.shopName}}</text>
+      <text class="goodsList_left_mi">距离{{item.distance}}米|预计{{item.time}}分钟</text>
+      <view>
+        <image src="{{item.headImgUrlPress || '/resources/default.png'}}" />
+        <text class='goodsList_left_num'>{{item.shopSharePeopleCount}}</text><text class="goodsList_left_text">人在共享储值卡</text> 
+      </view>
+    </view>
+    <view class="goodsList_right">
+      <view>点击使用</view>
+      <text>{{item.num1}}</text>.{{item.num2}}折起
+    </view>  
+  </view>  
+  <view wx:if="{{list.length == 0}}" class="noGoods">
+    <image src="../../../resources/noShop.png" mode="widthFix"/> 
+    当前范围内没有商家哦
+  </view>
+</view> 

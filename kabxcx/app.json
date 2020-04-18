@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/login/login",
+    "pages/setup/setup",
+    "pages/busCardDetail/busCardDetail",
+    "pages/busCardPay/busCardBuy",
+    "pages/busCardPayRes/busCardPayRes",
+    "pages/errorCode/errorCode",
+    "pages/perCardPayRes/perCardPayRes",
+    "pages/scrapeCard/scrapeCard",
+    "pages/cardScrapePay/cardScrapePay",
+    "pages/cardWalletBalance/cardWalletBalance",
+    "pages/cardWalletBuy/cardWalletBuy",
+    "pages/qrError/qrError",
+    "pages/noCard/noCard",
+    "pages/userAgreement/userAgreement",
+    "pages/loginPwd/loginPwd",
+    "pages/rechargeCardPayDetail/rechargeCardPayDetail",
+    "pages/rechargeCardPay/rechargeCardPay",
+    "pages/orderCardPay/orderCardPay",
+    "pages/orderPrePay/orderPrePay",
+    "pages/rechargePrePay/rechargePrePay",
+    "pages/rechargeStoredDetail/rechargeStoredDetail",
+    "pages/orderStoreDetail/orderStoreDetail"
+  ],
+  "subpackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/list/list",
+        "pages/cardRubBuy/cardRubBuy",
+        "pages/orderDetail/orderDetail",
+        "pages/orderScrapePay/orderScrapePay",
+        "pages/rechangeScrapePay/rechangeScrapePay",
+        "pages/rechargeCardDetail/rechargeCardDetail"
+      ]
+    },
+    {
+      "root": "packageB",
+      "name": "pack2",
+      "pages": [
+        "pages/wallet/wallet",
+        "pages/incomeDetail/incomeDetail",
+        "pages/cardEarnings/cardEarnings",
+        "pages/storedCardDetail/storedCardDetail",
+        "pages/cusIncome/cusIncome",
+        "pages/discountSetting/discountSetting",
+        "pages/useExplain/useExplain",
+        "pages/cardPrePay/cardPrePay",
+        "pages/cardRecharge/cardRecharge",
+        "pages/perDetail/perDetail",
+        "pages/shareDetail/shareDetail",
+        "pages/rechargeDetail/rechargeDetail",
+        "pages/cardSharePic/cardSharePic",
+        "pages/StoredCard/StoredCard"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "卡不多",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "以便推荐您附近的商家信息"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

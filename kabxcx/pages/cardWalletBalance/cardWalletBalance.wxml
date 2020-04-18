@@ -1,0 +1,88 @@
+<!--钱包余额充值详情  by cjy-->
+<view class='container'>
+  <view class='per-consume'>
+    <view class='per-consume-main'>
+      <view class='per-consume-left'>
+        <text>支出</text>
+      </view>
+      <view class='per-consume-right'>
+        <text>-1000.00</text>
+      </view>
+    </view>
+  </view>
+  <view class='per-consume-info'>
+  <!-- 交易单号 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>交易单号</text>
+      </view>
+      <view class='per-list-right'>
+        <text>230102030120</text>
+      </view>
+    </view>
+    <!-- 交易时间 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>交易时间</text>
+      </view>
+      <view class='per-list-right'>
+        <text>2017-12-01 11:32:32</text>
+      </view>
+    </view>
+    <!-- c储值卡名称 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>储值卡名称</text>
+      </view>
+      <view class='per-list-right'>
+        <text>1000元9折储值卡</text>
+      </view>
+    </view>
+    <!-- 商家名称 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>商家名称</text>
+      </view>
+      <view class='per-list-right'>
+        <text>猪八戒刀削面</text>
+      </view>
+    </view>
+    <!-- 充值金额 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>充值金额</text>
+      </view>
+      <view class='per-list-right'>
+        <text>1000元</text>
+      </view>
+    </view>
+    <!-- 共享折扣 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>共享折扣</text>
+      </view>
+      <view class='per-list-right'>
+        <text>9折</text>
+      </view>
+    </view>
+    <!-- 卡主昵称 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>卡主昵称</text>
+      </view>
+      <view class='per-list-right'>
+        <text>卡布拉</text>
+      </view>
+    </view>
+    <!-- 支付渠道 -->
+     <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>支付渠道</text>
+      </view>
+      <view class='per-list-right'>
+        <text>余额支付</text>
+      </view>
+    </view>
+  </view>
+</view>
+

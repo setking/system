@@ -1,0 +1,101 @@
+<!--收入详情  by cjy-->
+<view class='container'>
+  <view class='per-consume'>
+    <view class='per-consume-main'>
+      <view class='per-consume-left'>
+        <text>收入</text>
+      </view>
+      <view class='per-consume-right'>
+        <text>{{data.walletAmountIn}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='per-consume-info'>
+  <!-- 交易单号 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>交易单号</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.orderNum}}</text>
+      </view>
+    </view>
+    <!-- 交易时间 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>交易时间</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.createTime}}</text>
+      </view>
+    </view>
+    <!-- 消费金额 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>消费金额</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.originalPrice}}</text>
+      </view>
+    </view>
+    <!-- c储值卡折扣 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>共享折扣</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.cardsharerate}}折</text>
+      </view>
+    </view>
+    <!-- 卡主昵称 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>卡主昵称</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.cardmaster}}</text>
+      </view>
+    </view>
+    <!-- 蹭卡人昵称 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>蹭卡人昵称</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.consumer}}</text>
+      </view>
+    </view>
+    <!-- 支付渠道 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>支付渠道</text>
+      </view>
+      <view class='per-list-right' wx:if='{{data.payType == 0}}'>
+        <text>微信</text>
+      </view>
+      <view class='per-list-right' wx:if='{{data.payType == 1}}'>
+        <text>支付宝</text>
+      </view>
+    </view>
+    <!-- 商家名称 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>商家名称</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.shopName}}</text>
+      </view>
+    </view>
+    <!-- 储值卡名称 -->
+    <view class='per-consume-list'>
+      <view class='per-list-left'>
+        <text>储值卡名称</text>
+      </view>
+      <view class='per-list-right'>
+        <text>{{data.cardName}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+

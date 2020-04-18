@@ -1,0 +1,177 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wxdf2057077422ef4c",
+	"projectname": "kabxcx",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 21,
+			"list": [
+				{
+					"id": 0,
+					"name": "cardRubBuy",
+					"pathName": "pages/index/index",
+					"query": "latitude=40.10560022710834&longitude=116.2965745074327"
+				},
+				{
+					"id": 1,
+					"name": "cardRubBuy",
+					"pathName": "pages/orderStoreDetail/orderStoreDetail",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "busCardDetail",
+					"pathName": "pages/cardSharePic/cardSharePic",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cardScrapePay",
+					"pathName": "pages/cardScrapePay/cardScrapePay",
+					"query": "id=713d81ad7f1747238a8cad5834d1e084&ucid=b0a6a9b8cc954415933eabf7702a1806"
+				},
+				{
+					"id": 4,
+					"name": "支付成功",
+					"pathName": "pages/busCardPayRes/busCardPayRes",
+					"query": "id=20e512454c664151a0fc358a3244a902"
+				},
+				{
+					"id": 5,
+					"name": "购卡",
+					"pathName": "pages/busCardPay/busCardBuy",
+					"query": "model={\"id\":\"d5d8931669fa11e889e800163e328354\",\"shopid\":\"7afd88fb637943a39001de3a7724ffd4\",\"ucid\":\"\",\"cid\":\"\",\"cardAmount\":3000,\"consummerAmount\":\"\",\"cardRate\":8,\"shareRate\":\"\",\"isShelf\":\"0\",\"cardCount\":80,\"createTime\":\"\",\"shopName\":\"猪八戒刀削面\",\"cardName\":\"\",\"nickName\":\"\",\"sex\":\"\",\"age\":\"\",\"headImgUrl\":\"\",\"headImgUrlPress\":\"\",\"chargeCount\":\"2\",\"imgSrc\":\"http://payp.kabuduo.cn/img/s2/8.png\"}"
+				},
+				{
+					"id": -1,
+					"name": "买单",
+					"pathName": "pages/cardPrePay/cardPrePay",
+					"query": "model={\"id\":\"8eeb551a6688434392264c25a50553fa\",\"uid\":\"\",\"ucid\":\"\",\"cid\":\"\",\"shopid\":\"713d81ad7f1747238a8cad5834d1e084\",\"caid\":\"\",\"shopName\":\"第六维度\",\"cardName\":\"\",\"cardCount\":\"\",\"cardFaceAmount\":50000,\"cardAmount\":50000,\"cardRate\":6.5,\"shareRate\":7,\"shareAmountIn\":0,\"shareAmountOriginal\":50000,\"shareStartTime\":\"\",\"shareEndTime\":\"\",\"shareTime\":\"0\",\"shareEarnRate\":\"0.00\",\"isShelf\":\"\",\"isCardShare\":\"0\",\"payType\":\"\",\"totalUserCardChargeCount\":\"\",\"chargeCount\":\"\",\"nickName\":\"wmH5636\",\"age\":\"\",\"sex\":\"\",\"headImgUrl\":\"http://www.hutens.com:8082/pic/000000000.png\",\"headImgUrlPress\":\"http://www.hutens.com:8082/pic/00000000.png\",\"consummerAmount\":76923.07,\"isCardCount\":\"\",\"isShareCard\":\"\"}"
+				},
+				{
+					"id": -1,
+					"name": "会员中心",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "折扣",
+					"pathName": "pages/discountSetting/discountSetting",
+					"query": "id=564518992c01491699fa2dd2029a51fa"
+				},
+				{
+					"id": -1,
+					"name": "分享后",
+					"pathName": "pages/cardScrapePay/cardScrapePay",
+					"query": "model={\"id\":\"c468947e179f4725abf39c865af1aa7b\",\"uid\":\"\",\"ucid\":\"\",\"cid\":\"\",\"shopid\":\"7afd88fb637943a39001de3a7724ffd4\",\"caid\":\"\",\"shopName\":\"猪八戒刀削面\",\"cardName\":\"\",\"cardCount\":\"\",\"cardFaceAmount\":3000,\"cardAmount\":\"3000.00\",\"cardRate\":8,\"shareRate\":9,\"shareAmountIn\":0,\"shareAmountOriginal\":3000,\"shareStartTime\":\"\",\"shareEndTime\":\"2018-08-09 12:24:09\",\"shareTime\":\"1\",\"shareEarnRate\":\"0.00\",\"isShelf\":\"\",\"isCardShare\":\"0\",\"payType\":\"\",\"totalUserCardChargeCount\":\"\",\"chargeCount\":\"\",\"nickName\":\"wmH5636\",\"age\":\"\",\"sex\":\"\",\"headImgUrl\":\"http://www.hutens.com:8082/pic/000000000.png\",\"headImgUrlPress\":\"http://www.hutens.com:8082/pic/00000000.png\",\"consummerAmount\":3750,\"isCardCount\":\"\",\"isShareCard\":\"\"}"
+				},
+				{
+					"id": 10,
+					"name": "分享图片",
+					"pathName": "pages/cardSharePic/cardSharePic",
+					"query": "model={\"id\":\"564518992c01491699fa2dd2029a51fa\",\"uid\":\"\",\"ucid\":\"\",\"cid\":\"\",\"shopid\":\"fe0260b49a98450983c7cfcb8e5de13a\",\"caid\":\"\",\"shopName\":\"来不多B\",\"cardName\":\"\",\"cardCount\":\"\",\"cardFaceAmount\":500,\"cardAmount\":\"500.00\",\"cardRate\":3.2,\"shareRate\":8.5,\"shareAmountIn\":0,\"shareAmountOriginal\":500,\"shareStartTime\":\"2018-08-20 11:26:31\",\"shareEndTime\":\"\",\"shareTime\":\"0\",\"shareEarnRate\":\"0.00\",\"isShelf\":\"\",\"isCardShare\":\"1\",\"payType\":\"\",\"totalUserCardChargeCount\":\"\",\"chargeCount\":\"\",\"nickName\":\"伟\",\"age\":\"\",\"sex\":\"0\",\"headImgUrl\":\"\",\"headImgUrlPress\":\"\",\"consummerAmount\":1562.5,\"isCardCount\":\"\",\"isShareCard\":\"\",\"picRateUrl\":\"https://payp.kabuduo.cn/pic/20180820112633551.jpg\"}"
+				},
+				{
+					"id": -1,
+					"name": "蹭卡支付成功",
+					"pathName": "pages/busCardPayRes/busCardPayRes",
+					"query": "id=4898bb0b264d47c18c2a433f0fa0b87b"
+				},
+				{
+					"id": -1,
+					"name": "蹭卡支付",
+					"pathName": "pages/cardScrapePay/cardScrapePay",
+					"query": "model={\"id\":\"\",\"shopid\":\"7afd88fb637943a39001de3a7724ffd4\",\"ucid\":\"b0a6a9b8cc954415933eabf7702a1806\",\"cid\":\"c84726ad1f444564bf8d7bb1218f9cc8\",\"cardAmount\":3000,\"consummerAmount\":3750,\"cardRate\":8,\"shareRate\":\"9.2\",\"isShelf\":\"\",\"cardCount\":\"\",\"createTime\":\"\",\"shopName\":\"猪八戒刀削面\",\"cardName\":\"\",\"nickName\":\"Princess     \",\"sex\":\"0\",\"age\":\"\",\"headImgUrl\":\"\",\"headImgUrlPress\":\"\",\"chargeCount\":\"\",\"imgSrc\":\"http://payp.kabuduo.cn/img/s2/9.2.png\"}"
+				},
+				{
+					"id": 13,
+					"name": "储蓄卡",
+					"pathName": "pages/StoredCard/StoredCard",
+					"query": "id=9563ca5a86ad42cbb00a291f08507baf"
+				},
+				{
+					"id": -1,
+					"name": "蹭卡支付成功",
+					"pathName": "pages/busCardPayRes/busCardPayRes",
+					"query": "id=22ef6cf5392b41e5b256c15e162448e3"
+				},
+				{
+					"id": -1,
+					"name": "购卡支付成功",
+					"pathName": "pages/busCardPayRes/busCardPayRes",
+					"query": "id=b10ef4b4c309481084f951b29dba5232"
+				},
+				{
+					"id": -1,
+					"name": "商家",
+					"pathName": "pages/cardRubBuy/cardRubBuy",
+					"query": "id=713d81ad7f1747238a8cad5834d1e084"
+				},
+				{
+					"id": -1,
+					"name": "蹭卡支付",
+					"pathName": "pages/cardScrapePay/cardScrapePay",
+					"query": "model={\"id\":\"\",\"shopid\":\"6b36b0f9dd194343b2f33478c18c987d\",\"ucid\":\"845881b9b2fb43d6b98196a5c54c0edf\",\"cid\":\"090860036da74967933918e98a1264a4\",\"cardAmount\":292.77,\"consummerAmount\":344.43,\"cardRate\":8.5,\"shareRate\":\"9.5\",\"isShelf\":\"\",\"cardCount\":\"\",\"createTime\":\"\",\"shopName\":\"友鸭北京珠江摩尔店\",\"cardName\":\"\",\"nickName\":\"汪汪汪~\",\"sex\":\"0\",\"age\":\"\",\"headImgUrl\":\"\",\"headImgUrlPress\":\"\",\"chargeCount\":\"\",\"imgSrc\":\"http://payp.kabuduo.cn/img/s2/9.5.png\"}"
+				},
+				{
+					"id": -1,
+					"name": "stored",
+					"pathName": "pages/StoredCard/StoredCard",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "保存图片",
+					"pathName": "pages/cardSharePic/cardSharePic",
+					"query": "model={\"id\":\"859071fb81b544a9a125bdca5275b264\",\"uid\":\"\",\"ucid\":\"\",\"cid\":\"\",\"shopid\":\"683b06e01e104ce68e3206db0466d980\",\"caid\":\"\",\"shopName\":\"卡不多B\",\"cardName\":\"\",\"cardCount\":\"\",\"cardFaceAmount\":500,\"cardAmount\":500,\"cardRate\":7,\"shareRate\":9.5,\"shareAmountIn\":0,\"shareAmountOriginal\":500,\"shareStartTime\":\"2018-10-16 13:29:22\",\"shareEndTime\":\"\",\"shareTime\":\"0\",\"shareEarnRate\":\"0.00\",\"isScave\":\"0\",\"isShelf\":\"\",\"isCardShare\":\"1\",\"payType\":\"\",\"totalUserCardChargeCount\":\"\",\"chargeCount\":\"\",\"nickName\":\"伟\",\"age\":\"\",\"sex\":\"1\",\"headImgUrl\":\"https://prop.kabuduo.cn/pic/20181016113600247.jpg\",\"headImgUrlPress\":\"https://prop.kabuduo.cn/pic/20181016113600247.jpg\",\"consummerAmount\":714.28,\"isCardCount\":\"\",\"isShareCard\":\"\",\"picRateUrl\":\"\"}"
+				},
+				{
+					"id": 21,
+					"name": "car",
+					"pathName": "pages/busCardPay/busCardBuy",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,222 @@
+/* pages/busCardPay/busCardBuy.wxss */
+page{
+  background: #ffffff;
+  margin-bottom: 20px;
+}
+.con{
+  padding-bottom: 80px;
+}
+.card-surplus{
+  padding: 5px 5%;
+  text-align: right;
+  color: #4B87E0;
+  font-size: 16px;
+}
+.pay-num{
+  width: 100%;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 34px;
+  color: #433D3d;
+  margin-top: 5px;
+}
+.pay{
+  width: 100%;
+  height: 30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 16px;
+  color: #433D3d;
+  margin-top: 10px;
+}
+.pay-count{
+  width: 100%;
+  height: 60rpx;
+}
+.pay-info{
+  width: 92%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+.pay-left{
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+.pay-right{
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+.pay-title{
+  text-align: left;
+  color: #433D3d;
+  font-size: 12px;
+}
+.pay-message{
+  text-align: right;
+  color: #433D3d;
+  font-size: 12px;
+}
+.pay-type{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: #433D3d;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.pay-wx{
+  width: 92%;
+  height: 60rpx;
+  margin: 10px auto;
+  margin-bottom: 40rpx;
+}
+.pay-wx-left,.pay-wx-right{
+  width: 50%;
+  float: left;
+  height: 36px;
+}
+.pay-wx-icon{
+  width: 36px;
+  height: 36px;
+  float: left;
+}
+.pay-wx-icon image{
+  width: 100%;
+  height: 100%;
+}
+.pay-wx-left text{
+  margin-left: 20rpx;
+  text-align: center;
+  line-height: 35px;
+  color: #949494;
+  font-size: 14px;
+}
+.pay-check{
+  width: 36px;
+  height: 36px;
+  float: right;
+  /* margin-top: 20rpx; */
+}
+.pay-check image{
+  width: 100%;
+  height: 100%;
+}
+
+.pay-uncheck{
+  width: 36px;
+  height: 36px;
+  float: right;
+  /* margin-top: 20rpx; */
+}
+.pay-uncheck image{
+  width: 100%;
+  height: 100%;
+}
+.pay-btn-main{
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.pay-btn{
+  width: 93%;
+  height: 47px;
+  background: #f5d136;
+  text-align: center;
+  line-height: 47px;
+  color: #4B4949;
+  letter-spacing: 3px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+.pay-wx-icon1{
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-left: 10rpx;
+}
+
+/* 弹窗消费提醒 */
+.mask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.modalDlg{
+  width: 550rpx;
+  height: 450rpx;
+  background: #fff;
+  border-radius: 8px;
+  margin: 50% auto;
+  overflow: hidden;
+  position: relative;
+}
+.payBybalance{
+  width: 100%;
+  height: 22px;
+  margin: 5px auto;
+  text-align: center;
+  font-size: 16px;
+  color: #433D3D;
+}
+.paynum{
+  width: 100%;
+  text-align: center;
+  height: 48px;
+  margin: 0 auto;
+  line-height: 48px;
+  margin-bottom: 20rpx;
+}
+.payForBus,.payForCardName{
+  width: 85%;
+  margin: 0 auto;
+  text-align: left;
+  color: #252525;
+  line-height: 22px;
+  font-size: 14px;
+}
+.marb{
+  margin-bottom: 24rpx;
+}
+.payForbtn{
+  width: 100%;
+  height: 50px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: pink;
+  position: absolute;
+  bottom: 0;
+}
+.btnForCancel{
+  width: 50%;
+  height: 50px;
+  float: left;
+  background: #F6F4F4;
+  border-bottom-left-radius: 8px;
+  font-size: 16px;
+  color: #252525;
+  letter-spacing: 1.61px;
+  line-height: 50px;
+  text-align: center;
+}
+.btnForPay{
+  width: 50%;
+  height: 50px;
+  float: left;
+  background: #FFD006;
+  font-size: 16px;
+  color: #252525;
+  letter-spacing: 1.61px;
+  line-height: 50px;
+  text-align: center;
+}

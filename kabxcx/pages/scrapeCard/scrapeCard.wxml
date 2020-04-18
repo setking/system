@@ -1,0 +1,64 @@
+<!--蹭卡支付结果-->
+<view class='pay-container'>
+  <view class='pay-main'>
+    <text class='pay-sign'>￥</text><text class='pay-num'>300</text>
+  </view>
+   <view class='pay-success'>
+      <image src='/resources/pay_success.png' class='pay-icon'></image>
+      <text class='pay-text'>支付成功</text>
+      <image class='share' src='/resources/icon_share.png'></image>
+    </view>
+</view>
+<view class='pay-info'>
+  <view class='pay-list'>
+    <view class='pay-list-left'>
+      <text>商家名称</text>
+    </view>
+    <view class='pay-list-right'>
+      <text>不二家</text>
+    </view>
+  </view>
+  <view class='pay-list'>
+    <view class='pay-list-left'>
+      <text>消费金额</text>
+    </view>
+    <view class='pay-list-right'>
+      <text>100.00元</text>
+    </view>
+  </view>
+  <view class='pay-list'>
+    <view class='pay-list-left'>
+      <text>享受折扣</text>
+    </view>
+    <view class='pay-list-right'>
+      <text>9折</text>
+    </view>
+  </view>
+  <view class='pay-list'>
+    <view class='pay-list-left'>
+      <text>优惠金额</text>
+    </view>
+    <view class='pay-list-right'>
+      <text>10.00元</text>
+    </view>
+  </view>
+  <view class='pay-list'>
+    <view class='pay-list-left'>
+      <text>消费时间</text>
+    </view>
+    <view class='pay-list-right'>
+      <text>2017-12-22 17:10:11</text>
+    </view>
+  </view>
+  <view class='pay-list'>
+    <view class='pay-list-left'>
+      <text>支付金额</text>
+    </view>
+    <view class='pay-list-right'>
+      <text>300.00元</text>
+    </view>
+  </view>
+</view>
+<view class='bottom-img'>
+  <image src='/resources/ck3x.png'></image>
+</view>

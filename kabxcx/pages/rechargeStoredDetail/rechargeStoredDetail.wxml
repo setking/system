@@ -1,0 +1,74 @@
+<!--pages/rechargeStoredDetail/rechargeStoredDetail.wxml-->
+<!--个人中心 充送卡 储值卡详情 by cjy-->
+<view class=''>
+    <view class='card-list-main-test'>
+        <view class='recharge-card' bindtap='toRechargeDetail'>
+                <text class='b-detail-title'>充值500元</text>
+                <view class='big-font'>9</view>
+                <view class='card-point'>.</view>
+                <view class='small-font'>0</view>
+                <view class='balance-font'>折</view>
+                <view class='recharge-card-line'></view>
+                <view class='b-detail-discount'>
+                    <text>送<text class='big'>500</text>元</text>
+                </view>
+            </view>
+    </view>
+    <view class='card-info'>
+        <view class='card-info-main'>
+            <!-- 共享折扣设定 -->
+            <view class='card-setting' bindtap='toDiscountSet'>
+                <view class='card-setting-left'>
+                    <text>共享折扣设定</text>
+                </view>
+                <view class='card-setting-right'>
+                    <text>7.3折</text>
+                    <image src='/resources/icon_next.png' class='next'></image>
+                </view>
+            </view>
+            <!-- 消费明细 -->
+            <view class='card-setting' bindtap='tocusIncom' id='{{data.id}}'>
+                <view class='card-setting-left'>
+                    <text>消费明细</text>
+                </view>
+                <view class='card-setting-right'>
+                    <image src='/resources/icon_next.png' class='next'></image>
+                </view>
+            </view>
+            <!-- 使用说明 -->
+            <view class='card-setting' bindtap='toRule'>
+                <view class='card-setting-left'>
+                    <text>使用说明</text>
+                </view>
+                <view class='card-setting-right'>
+                    <image src='/resources/icon_next.png' class='next'></image>
+                </view>
+            </view>
+            <!-- 年收益化 -->
+            <view class='card-setting'>
+                <view class='card-setting-left'>
+                    <text>年收益化</text>
+                </view>
+                <view class='card-setting-right'>
+                    <text>0.00%</text>
+                </view>
+            </view>
+            <!-- 共享状态 -->
+            <view class='card-setting'>
+                <view class='card-setting-left'>
+                    <text>共享状态</text>
+                </view>
+                <view class='card-setting-right'>
+                    <switch bindchange="switch1Change" color='#FDD804'></switch>
+                    <switch bindchange="switch2Change" checked color='#FDD804' wx:if="{{data.isCardShare==1}}"></switch>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='card-btn'>
+        <view class='card-btn-main'>
+            <view class='recharge-btn' bindtap='toRechargeCardPay'>充值</view>
+            <view class='pay-btn' bindtap='toRechargePrePay'>买单</view>
+        </view>
+    </view>
+</view>

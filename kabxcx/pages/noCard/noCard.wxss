@@ -1,0 +1,25 @@
+.img{
+  width: 300rpx;
+  height: 300rpx;
+  margin-bottom: 50rpx;
+}
+.text{
+  opacity: 0.65;
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  color: #4B4949;
+  letter-spacing: 1.41px;
+  text-align: center;
+}
+.btn-area{
+  margin-bottom: 100rpx;
+  width: 100%;
+  text-align: center;
+}
+.btn-area .desc{
+  font-family: PingFangSC-Regular;
+  font-size: 11px;
+  color: #ADADAD;
+  letter-spacing: 0;
+  margin: 0 20rpx;
+}

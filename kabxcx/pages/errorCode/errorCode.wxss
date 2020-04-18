@@ -1,0 +1,15 @@
+/* pages/errorCode/errorCode.wxss */
+page{
+  background: #ffffff;
+}
+.code-img{
+  width: 86px;
+  height: 86px;
+  margin: 60px auto;
+  display: block;
+}
+.code-text{
+  text-align: center;
+  color: #8c8889;
+  font-size: 17px;
+}

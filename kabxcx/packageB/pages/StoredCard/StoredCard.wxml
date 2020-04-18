@@ -1,0 +1,75 @@
+<view class='container'>
+
+    <!-- 展示储值卡的列表页面 -->
+    <view class='card-list'>
+        <view class='card-list-info'>
+            <view class='card-list-left'>
+                <text>{{list.length}}张</text>
+            </view>
+            <view class='card-list-right'>
+                总计:{{toatalBalance}}
+            </view>
+        </view>
+        <!-- 没有储值卡时展示的页面 -->
+        <view class='no-card' wx:if="{{list.length == 0}}">
+            <image src='/resources/noShop.png'></image>
+            <view class='no-text'>
+                <text>目前暂无储值卡</text>
+            </view>
+        </view>
+        <!-- end -->
+        <view class='card-list-main-test'>
+            <view wx:for="{{list}}" wx:key="index">
+                <!-- 折扣卡样式 start-->
+                <view class='card-main' bindtap='toCardDetail' data-id="{{item.id}}" id="{{item.id}}" data-cardType="{{item.cardType}}" wx:if="{{item.cardType == 0}}">
+                    <text class='card-name'>{{item.shopName}}</text>
+                    <view class='big-font'>{{item.big}}</view>
+                    <view class='card-point'>.</view>
+                    <view class='small-font'>{{item.small || '0'}}</view>
+                    <view class='balance-font'>折</view>
+                    <view class='card-line'></view>
+                    <view class='card-status' wx:if="{{item.isCardShare == 1}}">共享</view>
+                    <text class='card-balance' style='bottom:55px;'>余额:{{item.cardAmount}}</text>
+                    <text class='card-income' style='bottom:55px;'>累计共享收益:{{item.shareAmountIn}}</text>
+
+                </view>
+                <!-- end -->
+                <!-- 次卡样式 start-->
+                <view class='order-card' bindtap='toCardDetail' data-id="{{item.id}}" id="{{item.id}}" data-cardType="{{item.cardType}}" wx:if="{{item.cardType == 2}}">
+                    <text class='card-name'>{{item.shopName}}</text>
+                    <view class='order-card-line'></view>
+                    <view class='order-card-status' wx:if="{{item.isCardShare == 1}}">共享</view>
+                    <view class='order-card-small-font'>累计共享收益</view>
+                    <view class='order-card-big-font' style='left:240rpx'>{{item.shareAmountIn}}</view>
+                    <view class='order-card-yuan'>元</view>
+                    <view class='order-card-monetary'>可用次数
+                        <text style='font-size:18px;font-weight:bold;padding:0 10rpx;'>{{item.cardReturn}}</text>次</view>
+                    <view class='order-card-type'>次卡</view>
+                </view>
+                <!-- end -->
+                <!-- c冲送卡样式 start-->
+                <view class='recharge-card' bindtap='toCardDetail' data-id="{{item.id}}" id="{{item.id}}" data-cardType="{{item.cardType}}" wx:if="{{item.cardType == 1}}">
+                    <text class='card-name'>{{item.shopName}}</text>
+                    <view class='big-font'>{{item.big}}</view>
+                    <view class='card-point'>.</view>
+                    <view class='small-font'>{{item.small || '0'}}</view>
+                    <view class='balance-font'>折</view>
+                    <view class='recharge-card-line'></view>
+                    <view class='rechange-card-status' wx:if="{{item.isCardShare == 1}}">共享</view>
+                    <text class='card-balance' style='bottom:130rpx;font-size:14px;'>余额:{{item.cardAmount}}</text>
+                    <text class='card-income' style='bottom:130rpx;font-size:14px;'>累计共享收益:{{item.shareAmountIn}}</text>
+                </view>
+                <!-- end -->
+            </view>
+        </view>
+        <!-- <view class='card-list-main' wx:for="{{list}}" wx:key="index" bindtap='toCardDetail' data-id='{{item.id}}' id='{{item.id}}'>
+            <image src='{{item.imgUrl}}' class='card-img'></image>
+            <text class='card-name'>{{item.shopName}}</text>
+            <view class='card-status' wx:if="{{item.isCardShare == 1}}">共享</view>
+            <text class='card-balance'>余额:{{item.cardAmount}}</text>
+            <text class='card-income'>累计收益:{{item.shareAmountIn}}</text>
+        </view> -->
+
+    </view>
+    <!-- end -->
+</view>

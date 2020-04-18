@@ -1,0 +1,222 @@
+/* pages/discountSetting/discountSetting.wxss */
+page{
+  background: #fff;
+}
+.discount-mian{
+  width: 100%;
+  height: 152px;
+  background: #fdd804;
+  overflow: hidden;
+}
+.discount-num{
+  width: 100%;
+  height: 47px;
+  text-align: center;
+  font-size: 42px;
+  line-height: 47px;
+  color: #fff;
+  margin: 10px 0;
+}
+.discount-text{
+  width: 100%;
+  height: 22px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+}
+.discount-info{
+  width: 80%;
+  height: 46px;
+  margin: 0 auto;
+}
+.discount-info-left{
+  float: left;
+  text-align: left;
+  /* width: 50%; */
+  height: 46px;
+}
+.balance-num{
+  font-size: 25px;
+  color: #fff;
+}
+.balance-text{
+  font-size: 13px;
+  color: #fff;
+  padding-left: 15%;
+}
+.discount-info-right{
+  float: right;
+  height: 46px;
+  text-align: right;
+}
+.balance-text1{
+  font-size: 13px;
+  color: #fff;
+  padding-right: 15%;
+}
+.discount-setting{
+  width: 75%;
+  height: 40px;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(221,216,216,0.50);
+  border-radius: 5px;
+  margin: 100px auto;
+  margin-bottom: 0;
+  position: relative;
+}
+.discount-num1{
+  margin-top: 10rpx;
+  color: #918B8B;
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  /* margin-right: 10rpx; */
+}
+.discount-num1 text{
+  flex: 1;
+}
+.discountImg{
+  position: absolute;
+  top: -120rpx;
+  left: 0;
+  width: 188rpx;
+  height: 170rpx;
+  margin-left: -94rpx;
+}
+.discountImg image{
+  width: 100%;
+  height: 100%;
+}
+.discountNum{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 90rpx;
+}
+.discount-card{
+  width: 100%;
+  font-size: 16px;
+  color: #ffd006;
+  text-align: center;
+  margin-top: 15px;
+}
+.open-share{
+  width: 90%;
+  height: 94rpx;
+  margin: 0 auto;
+  background: #f5d136;
+  color: #4b4949;
+  letter-spacing: 3px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 94rpx;
+}
+.btn-share-main{
+  width: 100%;
+  height: 47px;
+  position: fixed;
+  bottom:30rpx;
+  left: 0;
+}
+.discount_info_img{
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding-bottom: 120px;
+}
+.dis_img{
+  display: block;
+  width: 200px;
+  height: 120px;
+  margin: 0 auto;
+}
+.dis_info{
+  font-size: 12px;
+  text-align: center;
+  color: #4b4949;
+}
+/* .discount-num{
+  width: 94px;
+  height: 53px;
+  background: #fdd804;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+/* 分享弹框 */
+.mask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.modalDlg{
+  width: 100%;
+  height: 400rpx;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+.modal-list{
+  width: 100%;
+  height: 286rpx;
+  overflow: hidden;
+}
+.modal-list-main{
+  width: 600rpx;
+  height: 200rpx;
+  margin: 30rpx auto;
+}
+.list-main-left{
+  width: 50%;
+  height: 200rpx;
+  /* float: left; */
+  text-align: center;
+  color: #4B4949;
+  font-size: 12px;
+  margin: 0 auto;
+}
+.list-friend{
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 10rpx auto;
+}
+.btn-cancel{
+  width: 100%;
+  height: 48px;
+  background:#fff;
+  text-align: center;
+  line-height: 48px;
+  color: #4b4949;
+  font-size: 19px;
+  letter-spacing: 2.85px;
+
+}
+
+button.list-main-left{
+  border: #fff;
+  line-height:normal;
+  background: none;
+  -webkit-tap-highlight-color:none;
+}
+button.list-main-left::after{
+  border: #fff;
+  line-height:normal;
+  background: none;
+  -webkit-tap-highlight-color:none;
+}
+.share{
+  position: fixed;
+  bottom: -300px;
+}

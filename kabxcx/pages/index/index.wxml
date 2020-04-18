@@ -1,0 +1,44 @@
+
+<!--index.wxml-->
+<view class="container">
+  <map class='map' id="myMap" style='bottom:{{bottom}}px;' latitude="{{ latitude }}" longitude="{{ longitude }}" scale='16' markers='{{ markers }}' bindregionchange="bindregionchange" bindmarkertap="markertap" bindtap="bindtap" polyline='{{polyline}}'>
+    <cover-image src='/resources/me.png' class='icon me mar-left' bindtap='route' />
+    <cover-image src='/resources/list.png' class='icon list mar-right' bindtap='goList' />
+    <cover-image src='/resources/location.png' style="bottom:{{bottom}};" bindtap='getLocation' class='icon location' />
+    <cover-image src='/resources/qrcode.png' style="bottom:{{bottom}}; " bindtap='scanCode' class='icon qrcode' />
+    <cover-image class="icon cover-image" src="/resources/ding@3x.png" animation="{{animationMiddleHeaderItem}}"></cover-image>
+    <!-- <cover-view class='icon-index'>
+            这是一个覆盖物
+            <cover-image src=''></cover-image>
+        </cover-view> -->
+
+  </map>
+  <view style=''>
+    <canvas canvas-id='index-icon' style='width:130rpx;heigth:130rpx;'></canvas>
+    <canvas canvas-id='index-icon-shadow' style='width:120rpx;heigth:65px;'></canvas>
+  </view>
+  <swiper class='swiper' hidden='{{ !swiperFlag }}' next-margin="50rpx" previous-margin="50rpx" current='{{ current }}' bindchange='bindchange'>
+    <swiper-item class='swiper_li' wx:for="{{ swiperList }}" wx:key='index'>
+      <view class='flex siwper_con' bindtap="showshop" data-index="{{index}}">
+        <view class="flex column swiper_li_con">
+          <view>
+            <view class="shop_title">{{item.shopName}}</view>
+          </view>
+          <view class='flex auto bottom shop_desc'>
+            <image src="{{ item.headImgUrlPress }}" class='head_logo'></image>
+            <span class='shop_count'>{{ item.shopSharePeopleCount }}</span>
+            <view>人在使用共享卡</view>
+          </view>
+        </view>
+        <view class="auto flex middle center column discout">
+          <view class='auto'>
+            <view>点击使用</view>
+            <view>
+              <text class="discount_title">{{ item.discount[0] }}</text>
+              <text>{{ item.discount[1] ? '.' + item.discount[1] : '' }}</text>折起</view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

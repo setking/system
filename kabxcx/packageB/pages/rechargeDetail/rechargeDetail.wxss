@@ -1,0 +1,62 @@
+/* pages/rechargeDetail/rechargeDetail.wxss */
+page{
+  background: #ffffff;
+}
+.per-consume{
+  width: 100%;
+  height: 86px;
+  background: #FDD804;
+}
+.per-consume-main{
+  width: 90%;
+  height: 86px;
+  margin: 0 auto;
+}
+.per-consume-left{
+  width: 40%;
+  height: 86px;
+  float: left;
+  line-height: 86px;
+  text-align: left;
+  font-size: 18px;
+  color: #fff;
+}
+.per-consume-right{
+  width: 60%;
+  height: 86px;
+  float: right;
+  line-height: 86px;
+  text-align: right;
+  font-size: 44px;
+  color: #fff;
+  letter-spacing: 1.93px;
+}
+.per-consume-info{
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.per-consume-list{
+  width: 100%;
+  height: 20px;
+  margin-top: 20px;
+}
+.per-list-left{
+  width: 30%;
+  height: 20px;
+  float: left;
+  color: rgba(37, 37, 37, 0.65);
+  font-size: 13px;
+  text-align: left;
+  line-height: 20px;
+}
+.per-list-right{
+  width: 70%;
+  height: 20px;
+  float: right;
+  color: rgba(37, 37, 37, 0.65);
+  font-size: 13px;
+  text-align: right;
+  line-height: 20px;
+}
