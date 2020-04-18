@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.avatar-uploader .el-upload {
+    width: 178px;
+    height: 178px;
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .avatar-uploader .el-upload:hover {
+    border-color: #409EFF;
+  }
+  .avatar-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 178px;
+    height: 178px;
+    line-height: 178px;
+    text-align: center;
+  }
+  .avatar {
+    width: 178px;
+    height: 178px;
+    display: block;
+  }
+  .search_all{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .celent_pagination{
+    margin-top: 2rem;
+    float: right;
+  }
+  .switchStyle .el-switch__label {
+    position: absolute;
+    display: none;
+    color: #fff;
+    }
+    .switchStyle .el-switch__label--left {
+    z-index: 9;
+    left: .7rem;
+    }
+    .switchStyle .el-switch__label--right {
+    z-index: 9;
+    left: -1.4rem;  
+    }
+    .switchStyle .el-switch__label.is-active {
+    display: block;
+    }
+    .switchStyle.el-switch .el-switch__core,
+    .el-switch .el-switch__label {
+    width: 6rem !important;
+    }
+
+
+    .switchStyle1 .el-switch__label {
+      position: absolute;
+      display: none;
+      color: #fff;
+      }
+    .switchStyle1 .el-switch__label--left {
+      z-index: 9;
+      left: 1.8rem; 
+      }
+      .switchStyle1 .el-switch__label--right {
+      z-index: 9;
+      left: -.4rem;  
+      }
+      .switchStyle1 .el-switch__label.is-active {
+      display: block;
+      }
+      .switchStyle1.el-switch .el-switch__core,
+      .el-switch .el-switch__label {
+      width: 6rem !important;
+      }
+    .formSubmit div{
+      width: 15rem;
+      display: flex;
+  }
+  
+  .ruleForm_item{
+    width: 20%;
+    margin: 0 auto;
+}
+.addEngineering input{
+    width: 20rem;
+}
+.engineeringSpan{
+    display: flex;
+}
+.addPrimary{
+    margin-left: 10rem;
+}
+.el-input.is-disabled .el-input__inner{
+  color: #606266;
+}
+.el-popover{
+  width: 55rem;
+  height: 90%;
+  overflow: scroll;
+} 
+.bigHead{
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+.tableTd{
+  width: 10%;
+}
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li{
+  background-color: #fff;
+}
